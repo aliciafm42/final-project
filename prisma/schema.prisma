@@ -1,0 +1,21 @@
+// prisma/schema.prisma
+
+// 1️⃣ Connect Prisma to your database
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 2️⃣ Generate Prisma Client
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 3️⃣ Your User model
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

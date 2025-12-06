@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Navbar.module.css"],"sourcesContent":["/* Navbar.module.css */\n.navbar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 1rem;\n  background-color: #f5f5f5;\n}\n\n.authSection {\n  display: flex;\n  gap: 0.5rem;\n  align-items: center;\n}\n\n.signInLink,\n.signOutBtn {\n  padding: 0.5rem 1rem;\n  border: none;\n  background-color: #0070f3;\n  color: white;\n  cursor: pointer;\n  border-radius: 4px;\n  text-decoration: none;\n}\n\n.signOutBtn:hover,\n.signInLink:hover {\n  background-color: #005bb5;\n}\n\n.userEmail {\n  margin-right: 0.5rem;\n}\n"],"names":[],"mappings":"AACA;;;;;;;;AAQA;;;;;;AAMA;;;;;;;;;;AAWA;;;;AAKA"}}]
+}

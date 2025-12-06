@@ -1,0 +1,10 @@
+[
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/add-profile(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/add-profile"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/profile(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?\\/edit(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/profile/:path*/edit"
+  }
+]

@@ -1,0 +1,17 @@
+/* [project]/app/globals.css [app-client] (css) */
+body {
+  color: #333;
+  background-color: #f9fafb;
+  font-family: system-ui, sans-serif;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=app_globals_css_bad6b30c._.single.css.map*/

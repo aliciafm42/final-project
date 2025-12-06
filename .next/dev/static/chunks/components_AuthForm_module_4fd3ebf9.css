@@ -1,0 +1,71 @@
+/* [project]/components/AuthForm.module.css [app-client] (css) */
+.AuthForm-module__1db0Ja__authForm {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.AuthForm-module__1db0Ja__error {
+  color: red;
+}
+
+.AuthForm-module__1db0Ja__statusMessage {
+  color: #555;
+}
+
+.AuthForm-module__1db0Ja__toggle {
+  margin-top: 1rem;
+}
+
+.AuthForm-module__1db0Ja__button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+}
+
+.AuthForm-module__1db0Ja__button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.AuthForm-module__1db0Ja__orDivider {
+  text-align: center;
+  color: #666;
+  margin: 20px 0;
+}
+
+.AuthForm-module__1db0Ja__githubButton {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  font-weight: 500;
+  transition: background .2s;
+}
+
+.AuthForm-module__1db0Ja__githubButton:hover {
+  background: #f3f3f3;
+}
+
+.AuthForm-module__1db0Ja__googleButton {
+  color: #4285f4;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #4285f4;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  font-weight: 500;
+  transition: background .2s;
+}
+
+.AuthForm-module__1db0Ja__googleButton:hover {
+  background: #eef3ff;
+}
+
+/*# sourceMappingURL=components_AuthForm_module_4fd3ebf9.css.map*/
