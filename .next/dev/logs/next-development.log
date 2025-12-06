@@ -1,14 +1,14 @@
-[00:00:00.726] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.787] Server  LOG      ✓ Ready in 611ms
-[00:00:08.059] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:08.792] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:00:08.792] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
+[00:00:01.508] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.547] Server  LOG      ✓ Ready in 1431ms
+[00:00:02.578] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.273] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
+[00:00:03.274] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
     at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:23:37913)
-[00:00:08.809] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:00:08.809] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
+    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
+[00:00:03.293] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
+[00:00:03.293] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
     at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:23:37913)
-[00:00:08.920] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:00:08.920] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
+[00:00:03.396] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:03.396] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
