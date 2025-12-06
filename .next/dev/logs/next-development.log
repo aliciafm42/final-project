@@ -1,38 +1,33 @@
-[00:00:01.508] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.547] Server  LOG      ✓ Ready in 1431ms
-[00:00:02.578] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.273] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:00:03.274] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
-    at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
-[00:00:03.293] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:00:03.293] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
-    at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
-[00:00:03.396] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:00:03.396] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:06:45.546] Server  LOG        Reload env: .env
-[00:06:45.804] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:45.849] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:06:45.849] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
-    at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
-[00:06:45.858] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:06:45.859] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
-    at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
-[00:06:46.286] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:06:46.286] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:07:20.022] Server  LOG        Reload env: .env
-[00:07:20.214] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:20.262] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:07:20.262] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
-    at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
-[00:07:20.270] Server  ERROR   [auth][error] MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
-[00:07:20.270] Server  ERROR       at assertConfig (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:513:16)
-    at Auth (/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/node_modules_@auth_core_e5bac8e2._.js:5330:204)
-    at async AppRouteRouteModule.do (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37789)
-[00:07:21.286] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:07:21.286] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:00.695] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.747] Server  LOG      ✓ Ready in 564ms
+[00:00:02.846] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.791] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.704] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.699] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.569] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.133] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:29.403] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:33.105] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:36.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:46.553] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:47.992] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:48.683] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:49.518] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:50.083] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:50.912] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:51.361] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:52.097] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:01.557] Server  LOG      ✓ Compiled in 9.4s
+[00:02:01.632] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:02.361] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:03.107] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:03.832] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:04.393] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:05.435] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:28.868] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:29.598] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:30.651] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:31.588] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:32.972] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:33.986] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:35.716] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

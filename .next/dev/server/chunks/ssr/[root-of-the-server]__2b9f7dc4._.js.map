@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/aliciamartinez/Downloads/Final/app/recommendations/page.jsx"],"sourcesContent":["export default function Recommendations() {\n  return (\n    <main>\n      <h1>Recommendations</h1>\n      <p>Personalized eco tips and suggestions.</p>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;;0BACC,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;;;;;;;AAGT"}}]
+}

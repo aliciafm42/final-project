@@ -1,24 +1,30 @@
 import "./globals.css";
-import SessionProvider from "@/components/SessionProvider";
-import Navbar from "@/components/Navbar";
-
-export const metadata = {
-  title: "Student Profiles",
-  description: "A list of student profiles",
-};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <SessionProvider>
-          <Navbar />
-          <main>
-            <div className="section">
-              <div className="container">{children}</div>
-            </div>
-          </main>
-        </SessionProvider>
+        <nav className="navbar">
+          {/* LOGO SECTION */}
+          <div className="logo">
+            <span>🌿</span>
+            EcoTrack
+          </div>
+
+          {/* NAV LINKS */}
+          <div>
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/actions">Log Actions</a>
+            <a href="/goals">Goals</a>
+            <a href="/recommendations">Recommendations</a>
+            <a href="/profile">Profile</a>
+          </div>
+        </nav>
+
+        <div className="page-container">
+          {children}
+        </div>
       </body>
     </html>
   );

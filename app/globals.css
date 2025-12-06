@@ -1,14 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
 body {
-  font-family: system-ui, sans-serif;
-  background-color: #f9fafb;
-  color: #333;
+  background-color: #eaf7f7; /* light blue */
 }
 
-a {
-  color: #0070f3;
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #2e8b57;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 20px; /* ✅ Adds space between each page */
 }
 
-a:hover {
+.navbar a:hover {
   text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT CARD ===== */
+.page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== HEADINGS & TEXT ===== */
+h1 {
+  color: #2e8b57; /* green */
+  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: #3a7ca5; /* light blue */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===== LOGO AREA ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  font-size: 24px; /* leaf size */
 }
