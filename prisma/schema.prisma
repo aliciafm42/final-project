@@ -10,13 +10,11 @@ generator client {
 model User {
   id              Int       @id @default(autoincrement())
   email           String    @unique
-  password        String
+  password        String    // hashed
   experienceLevel String
   createdAt       DateTime  @default(now())
-  goals           Goal[]
-  actions         Action[]
-  recommendations Recommendation[]
 }
+
 
 
 model Goal {

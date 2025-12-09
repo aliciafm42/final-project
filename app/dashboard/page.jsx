@@ -1,37 +1,15 @@
-"use client";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { getUserFromRequest } from "@/lib/auth";
+import prisma from "@/lib/prisma";
 
-import { useState, useEffect } from "react";
+export default async function DashboardPage() {
+  const reqHeaders = headers();
+  const user = getUserFromRequest({ headers: reqHeaders });
 
-export default function DashboardPage() {
-  const [user, setUser] = useState(null);
-  const [points, setPoints] = useState(0);
+  if (!user) redirect("/login");
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const res = await fetch("/api/auth/me");
-      const data = await res.json();
-      if (data.user) {
-        setUser(data.user);
+  const dbUser = await prisma.user.findUnique({ where: { id: user.id } });
 
-        const actionsRes = await fetch("/api/actions");
-        const actionsData = await actionsRes.json();
-        const totalPoints = actionsData.reduce(
-          (sum, a) => sum + (data.user.experienceLevel === "beginner" ? 20 : 10),
-          0
-        );
-        setPoints(totalPoints);
-      }
-    };
-    fetchUser();
-  }, []);
-
-  if (!user) return <p>Please log in to view your dashboard.</p>;
-
-  return (
-    <div className="dashboard-page">
-      <h2>Dashboard</h2>
-      <p>Hello, {user.email}</p>
-      <p>Your points: {points}</p>
-    </div>
-  );
+  return <div>Welcome {dbUser.email}, your level is {dbUser.experienceLevel}</div>;
 }
