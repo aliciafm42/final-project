@@ -74,15 +74,17 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$bcrypt__$5b$external$5d$__
 ;
 async function POST(req) {
     try {
-        const { email, password, experience } = await req.json();
-        if (!email || !password || !experience) {
+        const body = await req.json();
+        const { email, password, experienceLevel } = body;
+        // Validate all fields explicitly
+        if (!email || !password || !experienceLevel) {
             return new Response(JSON.stringify({
-                error: "Missing fields"
+                error: "Missing fields: email, password, and experienceLevel are required."
             }), {
                 status: 400
             });
         }
-        // Check if user exists
+        // Check for duplicate email
         const existingUser = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique({
             where: {
                 email
@@ -90,7 +92,7 @@ async function POST(req) {
         });
         if (existingUser) {
             return new Response(JSON.stringify({
-                error: "User already exists"
+                error: "Email already associated with an account."
             }), {
                 status: 400
             });
@@ -102,18 +104,22 @@ async function POST(req) {
             data: {
                 email,
                 password: hashedPassword,
-                experienceLevel: experience
+                experienceLevel
             }
         });
         return new Response(JSON.stringify({
-            message: "Account created",
-            user
+            user: {
+                id: user.id,
+                email: user.email,
+                experienceLevel: user.experienceLevel
+            }
         }), {
             status: 200
         });
-    } catch (error) {
+    } catch (err) {
+        console.error("REGISTER ERROR:", err);
         return new Response(JSON.stringify({
-            error: error.message
+            error: "Server error"
         }), {
             status: 500
         });

@@ -3,16 +3,27 @@ import bcrypt from "bcrypt";
 
 export async function POST(req) {
   try {
-    const { email, password, experience } = await req.json();
+    const body = await req.json();
+    const { email, password, experienceLevel } = body;
 
-    if (!email || !password || !experience) {
-      return new Response(JSON.stringify({ error: "Missing fields" }), { status: 400 });
+    // Validate all fields explicitly
+    if (!email || !password || !experienceLevel) {
+      return new Response(
+        JSON.stringify({ error: "Missing fields: email, password, and experienceLevel are required." }),
+        { status: 400 }
+      );
     }
 
-    // Check if user exists
-    const existingUser = await prisma.user.findUnique({ where: { email } });
+    // Check for duplicate email
+    const existingUser = await prisma.user.findUnique({
+      where: { email },
+    });
+
     if (existingUser) {
-      return new Response(JSON.stringify({ error: "User already exists" }), { status: 400 });
+      return new Response(
+        JSON.stringify({ error: "Email already associated with an account." }),
+        { status: 400 }
+      );
     }
 
     // Hash password
@@ -23,12 +34,22 @@ export async function POST(req) {
       data: {
         email,
         password: hashedPassword,
-        experienceLevel: experience,
+        experienceLevel,
       },
     });
 
-    return new Response(JSON.stringify({ message: "Account created", user }), { status: 200 });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+    return new Response(
+      JSON.stringify({
+        user: {
+          id: user.id,
+          email: user.email,
+          experienceLevel: user.experienceLevel,
+        },
+      }),
+      { status: 200 }
+    );
+  } catch (err) {
+    console.error("REGISTER ERROR:", err);
+    return new Response(JSON.stringify({ error: "Server error" }), { status: 500 });
   }
 }

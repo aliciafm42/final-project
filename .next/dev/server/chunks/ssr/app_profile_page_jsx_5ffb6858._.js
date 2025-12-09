@@ -15,48 +15,70 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$js
 ;
 function ProfilePage() {
     const { user, login } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
-    const [isRegistering, setIsRegistering] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [experienceLevel, setExperienceLevel] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("BEGINNER");
     const [message, setMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
-    const handleSubmit = async (e)=>{
+    const [emailError, setEmailError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    // Separate functions: one for LOGIN, one for REGISTER
+    const handleLogin = async (e)=>{
         e.preventDefault();
-        setMessage("");
+        setMessage("Logging in...");
+        setEmailError("");
         try {
-            const url = isRegistering ? "/api/auth/register" : "/api/auth/login";
-            const bodyData = isRegistering ? {
-                email,
-                password,
-                experienceLevel
-            } : {
-                email,
-                password
-            };
-            const res = await fetch(url, {
+            const res = await fetch("/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(bodyData)
+                body: JSON.stringify({
+                    email,
+                    password
+                })
             });
             const data = await res.json();
             if (!res.ok) {
-                // Show specific message if email is already in use
-                if (data.error && data.error.includes("already in use")) {
-                    setMessage("This email is already registered. Please use a different email.");
+                setMessage(data.error || "Login failed");
+                return;
+            }
+            login(data.user);
+            setMessage("Login successful!");
+        } catch (err) {
+            setMessage("Login failed: " + err.message);
+        }
+    };
+    const handleRegister = async (e)=>{
+        e.preventDefault();
+        setMessage("Registering...");
+        setEmailError("");
+        try {
+            const res = await fetch("/api/auth/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                    experienceLevel
+                })
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                if (data.error.includes("Email")) {
+                    setEmailError(data.error);
                 } else {
-                    setMessage(data.error || "Something went wrong.");
+                    setMessage(data.error || "Registration failed");
                 }
                 return;
             }
             login(data.user);
-            setMessage(isRegistering ? "Registration successful!" : "Login successful!");
+            setMessage("Registration successful!");
         } catch (err) {
-            console.error(err);
-            setMessage("An unexpected error occurred. Please try again.");
+            setMessage("Registration failed: " + err.message);
         }
     };
+    // Logged-in view
     if (user) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "profile-page p-4",
@@ -69,7 +91,7 @@ function ProfilePage() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/profile/page.jsx",
-                    lineNumber: 54,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -79,7 +101,7 @@ function ProfilePage() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/profile/page.jsx",
-                    lineNumber: 55,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -87,29 +109,29 @@ function ProfilePage() {
                     children: "Login successful!"
                 }, void 0, false, {
                     fileName: "[project]/app/profile/page.jsx",
-                    lineNumber: 56,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/profile/page.jsx",
-            lineNumber: 53,
+            lineNumber: 73,
             columnNumber: 7
         }, this);
     }
+    // Login/Register UI stays EXACTLY the same style you had
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "login-register-page p-4 max-w-xs",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "text-xl font-bold mb-4",
-                children: isRegistering ? "Register" : "Login"
+                children: "Welcome! Please Login or Register"
             }, void 0, false, {
                 fileName: "[project]/app/profile/page.jsx",
-                lineNumber: 63,
+                lineNumber: 84,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                onSubmit: handleSubmit,
                 className: "flex flex-col gap-2",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -121,8 +143,16 @@ function ProfilePage() {
                         className: "p-2 border rounded"
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 65,
+                        lineNumber: 87,
                         columnNumber: 9
+                    }, this),
+                    emailError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-red-600 text-sm",
+                        children: emailError
+                    }, void 0, false, {
+                        fileName: "[project]/app/profile/page.jsx",
+                        lineNumber: 96,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                         type: "password",
@@ -133,10 +163,10 @@ function ProfilePage() {
                         className: "p-2 border rounded"
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 73,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
-                    isRegistering && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                         value: experienceLevel,
                         onChange: (e)=>setExperienceLevel(e.target.value),
                         className: "p-2 border rounded",
@@ -146,67 +176,84 @@ function ProfilePage() {
                                 children: "Beginner"
                             }, void 0, false, {
                                 fileName: "[project]/app/profile/page.jsx",
-                                lineNumber: 87,
-                                columnNumber: 13
+                                lineNumber: 114,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                 value: "INTERMEDIATE",
                                 children: "Intermediate"
                             }, void 0, false, {
                                 fileName: "[project]/app/profile/page.jsx",
-                                lineNumber: 88,
-                                columnNumber: 13
+                                lineNumber: 115,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                 value: "EXPERIENCED",
                                 children: "Experienced"
                             }, void 0, false, {
                                 fileName: "[project]/app/profile/page.jsx",
-                                lineNumber: 89,
-                                columnNumber: 13
+                                lineNumber: 116,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 82,
-                        columnNumber: 11
+                        lineNumber: 109,
+                        columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        type: "submit",
-                        className: "p-2 bg-green-700 text-white rounded mt-2",
-                        children: isRegistering ? "Register" : "Login"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex gap-2 mt-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "flex-1 p-2 bg-green-700 text-white rounded",
+                                onClick: handleLogin,
+                                children: "Login"
+                            }, void 0, false, {
+                                fileName: "[project]/app/profile/page.jsx",
+                                lineNumber: 121,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "self-center text-gray-600",
+                                children: "|"
+                            }, void 0, false, {
+                                fileName: "[project]/app/profile/page.jsx",
+                                lineNumber: 128,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "flex-1 p-2 bg-green-600 text-white rounded",
+                                onClick: handleRegister,
+                                children: "Register"
+                            }, void 0, false, {
+                                fileName: "[project]/app/profile/page.jsx",
+                                lineNumber: 130,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 92,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/profile/page.jsx",
-                lineNumber: 64,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "mt-2 text-sm text-blue-700 cursor-pointer",
-                onClick: ()=>setIsRegistering(!isRegistering),
-                children: isRegistering ? "Already have an account? Login" : "Don't have an account? Register"
-            }, void 0, false, {
-                fileName: "[project]/app/profile/page.jsx",
-                lineNumber: 99,
+                lineNumber: 86,
                 columnNumber: 7
             }, this),
             message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "mt-2 text-red-700",
+                className: "mt-2 text-sm text-blue-700",
                 children: message
             }, void 0, false, {
                 fileName: "[project]/app/profile/page.jsx",
-                lineNumber: 102,
+                lineNumber: 139,
                 columnNumber: 19
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/profile/page.jsx",
-        lineNumber: 62,
+        lineNumber: 83,
         columnNumber: 5
     }, this);
 }
