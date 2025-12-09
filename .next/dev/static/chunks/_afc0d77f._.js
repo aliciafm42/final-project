@@ -46,11 +46,15 @@ function ProfilePage() {
             });
             const data = await res.json();
             if (res.ok) {
-                login(data.user);
-                setMessage(isRegister ? "Registered!" : "Logged in!");
-                router.push("/dashboard"); // redirect to personalized page
+                login(data.user); // save user in context + localStorage
+                setMessage(isRegister ? "Registration successful!" : "Login successful!");
+                setEmail("");
+                setPassword("");
+                setExperienceLevel("");
+                // redirect to dashboard or personalized page
+                router.push("/dashboard");
             } else {
-                setMessage(data.error || "Error");
+                setMessage(data.error || "Something went wrong");
             }
         } catch (err) {
             setMessage("Server error");
@@ -68,7 +72,7 @@ function ProfilePage() {
                         children: "Login"
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 43,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -77,13 +81,13 @@ function ProfilePage() {
                         children: "Register"
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 44,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/profile/page.jsx",
-                lineNumber: 42,
+                lineNumber: 46,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -93,7 +97,7 @@ function ProfilePage() {
                         children: "Email:"
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 48,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -103,14 +107,14 @@ function ProfilePage() {
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 49,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                         children: "Password:"
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 50,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -120,7 +124,7 @@ function ProfilePage() {
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 51,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, this),
                     isRegister && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -129,7 +133,7 @@ function ProfilePage() {
                                 children: "Are you new to sustainability?"
                             }, void 0, false, {
                                 fileName: "[project]/app/profile/page.jsx",
-                                lineNumber: 55,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -142,7 +146,7 @@ function ProfilePage() {
                                         children: "Select"
                                     }, void 0, false, {
                                         fileName: "[project]/app/profile/page.jsx",
-                                        lineNumber: 57,
+                                        lineNumber: 62,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -150,7 +154,7 @@ function ProfilePage() {
                                         children: "Yes, I’m new"
                                     }, void 0, false, {
                                         fileName: "[project]/app/profile/page.jsx",
-                                        lineNumber: 58,
+                                        lineNumber: 63,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -158,13 +162,13 @@ function ProfilePage() {
                                         children: "No, I have experience"
                                     }, void 0, false, {
                                         fileName: "[project]/app/profile/page.jsx",
-                                        lineNumber: 59,
+                                        lineNumber: 64,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/profile/page.jsx",
-                                lineNumber: 56,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -174,26 +178,26 @@ function ProfilePage() {
                         children: isRegister ? "Register" : "Login"
                     }, void 0, false, {
                         fileName: "[project]/app/profile/page.jsx",
-                        lineNumber: 64,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/profile/page.jsx",
-                lineNumber: 47,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: message
             }, void 0, false, {
                 fileName: "[project]/app/profile/page.jsx",
-                lineNumber: 66,
+                lineNumber: 71,
                 columnNumber: 19
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/profile/page.jsx",
-        lineNumber: 41,
+        lineNumber: 45,
         columnNumber: 5
     }, this);
 }
@@ -210,6 +214,10 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/node_modules/next/navigation.js [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
+
+module.exports = __turbopack_context__.r("[project]/node_modules/next/dist/client/components/navigation.js [app-client] (ecmascript)");
+}),
 ]);
 
-//# sourceMappingURL=app_profile_page_jsx_6cfe88b4._.js.map
+//# sourceMappingURL=_afc0d77f._.js.map

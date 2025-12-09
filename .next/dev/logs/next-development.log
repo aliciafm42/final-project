@@ -3789,3 +3789,32 @@ https://nextjs.org/docs/messages/module-not-found
 [00:39:12.397] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:39:16.240] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:39:17.711] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:44.559] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:45:44.639] Server  LOG      ✓ Compiled in 7ms
+[00:45:44.801] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:04.774] Server  LOG      ✓ Compiled in 21ms
+[00:46:04.893] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:15.786] Server  LOG      ✓ Compiled in 5ms
+[00:48:29.739] Server  LOG      ✓ Compiled in 5ms
+[00:49:56.182] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:57.285] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:57.945] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:50:58.013] Server  LOG      ✓ Compiled in 4ms
+[00:50:58.167] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:04.890] Server  LOG      ✓ Compiled in 4ms
+[00:51:12.415] Server  LOG      ✓ Compiled in 36ms
+[00:51:12.540] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:29.316] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:22.742] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:35.088] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:53:35.164] Server  LOG      ✓ Compiled in 4ms
+[00:53:35.285] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:51.342] Server  LOG      ✓ Compiled in 10ms
+[00:53:59.627] Server  LOG      ✓ Compiled in 28ms
+[00:53:59.751] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:28.724] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:35.683] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:22.867] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:55:22.929] Server  LOG      ✓ Compiled in 10ms
+[00:55:23.063] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:43.421] Server  LOG      ✓ Compiled in 2ms

@@ -1,31 +1,27 @@
 "use client";
-
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  const fetchUser = async () => {
-    const res = await fetch("/api/auth/me");
-    const data = await res.json();
-    if (data.user) setUser(data.user);
-    else setUser(null);
-  };
-
   useEffect(() => {
-    fetchUser();
+    const storedUser = localStorage.getItem("ecoUser");
+    if (storedUser) setUser(JSON.parse(storedUser));
   }, []);
 
-  return (
-    <AuthContext.Provider value={{ user, setUser, fetchUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  useEffect(() => {
+    if (user) localStorage.setItem("ecoUser", JSON.stringify(user));
+    else localStorage.removeItem("ecoUser");
+  }, [user]);
+
+  const login = (userData) => setUser(userData);
+  const logout = () => setUser(null);
+
+  return <AuthContext.Provider value={{ user, login, logout }}>{children}</AuthContext.Provider>;
 }
 
-// Custom hook to use auth
 export function useAuth() {
   return useContext(AuthContext);
 }

@@ -1,44 +1,23 @@
-import { compare } from "bcryptjs";
 import prisma from "@/lib/prisma";
-import jwt from "jsonwebtoken";
-import { serialize } from "cookie";
+import bcrypt from "bcrypt";
 
-export async function POST(req) {
+export default async function handler(req, res) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+
+  const { email, password } = req.body;
+
+  if (!email || !password) return res.status(400).json({ error: "Missing email or password" });
+
   try {
-    const { email, password } = await req.json();
-
     const user = await prisma.user.findUnique({ where: { email } });
-    if (!user) {
-      return new Response(JSON.stringify({ error: "User not found" }), { status: 404 });
-    }
+    if (!user) return res.status(401).json({ error: "Invalid credentials" });
 
-    const isValid = await compare(password, user.password);
-    if (!isValid) {
-      return new Response(JSON.stringify({ error: "Incorrect password" }), { status: 401 });
-    }
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) return res.status(401).json({ error: "Invalid credentials" });
 
-    // Create JWT token
-    const token = jwt.sign(
-      { id: user.id, email: user.email },
-      process.env.JWT_SECRET,
-      { expiresIn: "7d" }
-    );
-
-    // Set HTTP-only cookie
-    const cookie = serialize("authToken", token, {
-      httpOnly: true,
-      path: "/",
-      maxAge: 7 * 24 * 60 * 60, // 7 days
-      sameSite: "strict",
-      secure: process.env.NODE_ENV === "production",
-    });
-
-    return new Response(JSON.stringify({ message: "Login successful", user: { id: user.id, email: user.email } }), {
-      status: 200,
-      headers: { "Set-Cookie": cookie },
-    });
+    res.status(200).json({ user: { id: user.id, email: user.email, experienceLevel: user.experienceLevel } });
   } catch (err) {
     console.error(err);
-    return new Response(JSON.stringify({ error: "Login failed" }), { status: 500 });
+    res.status(500).json({ error: "Server error" });
   }
 }
