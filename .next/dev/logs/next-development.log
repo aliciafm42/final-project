@@ -1,7 +1,20 @@
-[00:00:00.841] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.905] Server  LOG      ✓ Ready in 693ms
-[00:00:06.046] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:53.166] Server  WARN    Error: Route "/dashboard" used `headers().get`. `headers()` returns a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:00:53.170] Server  ERROR    ⨯ TypeError: req.headers.get is not a function
-[00:00:53.292] Browser ERROR   uncaughtError: TypeError: req.headers.get is not a function
-[00:01:01.346] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.057] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.126] Server  LOG      ✓ Ready in 908ms
+[00:00:06.251] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:58.796] Server  LOG      ✓ Compiled in 7ms
+[00:02:16.784] Browser ERROR   {}
+[00:03:32.940] Server  LOG      ✓ Compiled in 6ms
+[00:04:10.541] Server  LOG      ✓ Compiled in 3ms
+[00:04:13.340] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:48.253] Server  LOG      ✓ Compiled in 7ms
+[00:04:58.923] Browser ERROR   {}
+[00:05:35.778] Server  LOG      ✓ Compiled in 6ms
+[00:05:41.040] Browser ERROR   {}
+[00:06:20.060] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:25.971] Browser ERROR   {}
+[00:07:43.925] Server  LOG      ✓ Compiled in 8ms
+[00:07:47.243] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:45.563] Server  LOG      ✓ Compiled in 4ms
+[00:11:06.185] Server  LOG      ✓ Compiled in 8ms
+[00:11:56.716] Server  LOG      ✓ Compiled in 13ms
+[00:12:00.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

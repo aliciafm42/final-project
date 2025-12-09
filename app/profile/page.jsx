@@ -4,124 +4,102 @@ import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 
 export default function ProfilePage() {
-  const { login, user } = useAuth();
-
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  const [regEmail, setRegEmail] = useState("");
-  const [regPassword, setRegPassword] = useState("");
-  const [regExperience, setRegExperience] = useState("");
+  const { user, login } = useAuth();
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [experienceLevel, setExperienceLevel] = useState("BEGINNER");
   const [message, setMessage] = useState("");
 
-  // Login handler
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: loginEmail, password: loginPassword }),
-    });
-    const data = await res.json();
-    if (res.ok) {
+    setMessage("");
+
+    try {
+      const url = isRegistering ? "/api/auth/register" : "/api/auth/login";
+
+      const bodyData = isRegistering
+        ? { email, password, experienceLevel }
+        : { email, password };
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(bodyData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        // Show specific message if email is already in use
+        if (data.error && data.error.includes("already in use")) {
+          setMessage("This email is already registered. Please use a different email.");
+        } else {
+          setMessage(data.error || "Something went wrong.");
+        }
+        return;
+      }
+
       login(data.user);
-      setMessage("Login successful!");
-    } else {
-      setMessage(data.error);
+      setMessage(isRegistering ? "Registration successful!" : "Login successful!");
+    } catch (err) {
+      console.error(err);
+      setMessage("An unexpected error occurred. Please try again.");
     }
   };
 
-  // Register handler
-  const handleRegister = async (e) => {
-    e.preventDefault();
-    if (!regExperience) {
-      setMessage("Please select your experience level");
-      return;
-    }
-
-    const res = await fetch("/api/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: regEmail,
-        password: regPassword,
-        experience: regExperience,
-      }),
-    });
-
-    const data = await res.json();
-    if (res.ok) {
-      login(data.user);
-      setMessage("Account created!");
-    } else {
-      setMessage(data.error);
-    }
-  };
+  if (user) {
+    return (
+      <div className="profile-page p-4">
+        <h2 className="text-xl font-bold">Welcome, {user.email}</h2>
+        <p>Experience Level: {user.experienceLevel || "BEGINNER"}</p>
+        <p className="text-green-700 font-medium mt-2">Login successful!</p>
+      </div>
+    );
+  }
 
   return (
-    <div style={{ maxWidth: "500px", margin: "auto", padding: "20px" }}>
-      {!user && (
-        <>
-          {/* Login Form */}
-          <form onSubmit={handleLogin} style={{ marginBottom: "20px" }}>
-            <h2>Login</h2>
-            <input
-              type="email"
-              placeholder="Email"
-              value={loginEmail}
-              onChange={(e) => setLoginEmail(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={loginPassword}
-              onChange={(e) => setLoginPassword(e.target.value)}
-              required
-            />
-            <button type="submit">Login</button>
-          </form>
-
-          {/* Registration Form */}
-          <form onSubmit={handleRegister}>
-            <h2>Register</h2>
-            <input
-              type="email"
-              placeholder="Email"
-              value={regEmail}
-              onChange={(e) => setRegEmail(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={regPassword}
-              onChange={(e) => setRegPassword(e.target.value)}
-              required
-            />
-            <label>Experience Level</label>
-            <select
-              value={regExperience}
-              onChange={(e) => setRegExperience(e.target.value)}
-              required
-            >
-              <option value="">Select your level</option>
-              <option value="BEGINNER">Beginner</option>
-              <option value="INTERMEDIATE">Intermediate</option>
-              <option value="EXPERIENCED">Experienced</option>
-            </select>
-            <button type="submit">Create Account</button>
-          </form>
-        </>
-      )}
-
-      {user && (
-        <div>
-          <h2>Welcome {user.email}</h2>
-          <p>Experience Level: {user.experienceLevel}</p>
-        </div>
-      )}
-
-      {message && <p style={{ color: "green", marginTop: "10px" }}>{message}</p>}
+    <div className="login-register-page p-4 max-w-xs">
+      <h2 className="text-xl font-bold mb-4">{isRegistering ? "Register" : "Login"}</h2>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="p-2 border rounded"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          className="p-2 border rounded"
+        />
+        {isRegistering && (
+          <select
+            value={experienceLevel}
+            onChange={(e) => setExperienceLevel(e.target.value)}
+            className="p-2 border rounded"
+          >
+            <option value="BEGINNER">Beginner</option>
+            <option value="INTERMEDIATE">Intermediate</option>
+            <option value="EXPERIENCED">Experienced</option>
+          </select>
+        )}
+        <button
+          type="submit"
+          className="p-2 bg-green-700 text-white rounded mt-2"
+        >
+          {isRegistering ? "Register" : "Login"}
+        </button>
+      </form>
+      <p className="mt-2 text-sm text-blue-700 cursor-pointer" onClick={() => setIsRegistering(!isRegistering)}>
+        {isRegistering ? "Already have an account? Login" : "Don't have an account? Register"}
+      </p>
+      {message && <p className="mt-2 text-red-700">{message}</p>}
     </div>
   );
 }

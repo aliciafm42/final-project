@@ -1,47 +1,44 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import { useAuth } from "@/context/AuthContext";
 
 export default function GoalsPage() {
   const { user } = useAuth();
   const [goal, setGoal] = useState("");
-  const [message, setMessage] = useState("");
+  const [goals, setGoals] = useState([]);
+
+  const fetchGoals = async () => {
+    if (!user) return;
+    const res = await fetch("/api/goals/list?userId=" + user.id);
+    const data = await res.json();
+    setGoals(data.goals || []);
+  };
 
   const handleAddGoal = async () => {
-    if (!user) {
-      alert("Login to save goals permanently.");
-      return;
-    }
-
-    try {
-      const res = await fetch("/api/goals", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ goal }),
-      });
-      if (res.ok) setMessage("Goal saved!");
-      else setMessage("Failed to save goal.");
-    } catch {
-      setMessage("Server error while saving goal.");
+    if (!goal) return;
+    const res = await fetch("/api/goals/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: goal, userId: user.id }),
+    });
+    const data = await res.json();
+    if (res.ok) {
+      setGoals([...goals, data.goal]);
+      setGoal("");
     }
   };
 
+  useEffect(() => { fetchGoals(); }, [user]);
+
+  if (!user) return <p>Please login to view goals.</p>;
+
   return (
-    <div style={{ padding: "20px", maxWidth: "600px", margin: "auto" }}>
-      <h1>Goals</h1>
-      <input
-        type="text"
-        placeholder="Enter a new goal"
-        value={goal}
-        onChange={(e) => setGoal(e.target.value)}
-      />
+    <div className="page-container">
+      <h2>Set Your Goals</h2>
+      <input value={goal} onChange={(e) => setGoal(e.target.value)} placeholder="e.g., Bike to school 3x/week" />
       <button onClick={handleAddGoal}>Add Goal</button>
-      {message && <p>{message}</p>}
-      {!user && (
-        <p style={{ fontSize: "0.9em", color: "gray" }}>
-          Login to save your goals permanently.
-        </p>
-      )}
+      <ul>{goals.map((g) => <li key={g.id}>{g.text}</li>)}</ul>
     </div>
   );
 }

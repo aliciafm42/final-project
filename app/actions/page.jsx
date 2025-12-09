@@ -1,64 +1,44 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useAuth } from "@/context/AuthContext";
 
 export default function ActionsPage() {
-  const [user, setUser] = useState(null);
+  const { user } = useAuth();
   const [action, setAction] = useState("");
   const [actions, setActions] = useState([]);
 
   const fetchActions = async () => {
-    const res = await fetch("/api/actions");
+    if (!user) return;
+    const res = await fetch("/api/actions/list?userId=" + user.id);
     const data = await res.json();
-    setActions(data);
+    setActions(data.actions || []);
   };
 
-  useEffect(() => {
-    fetch("/api/auth/me")
-      .then((res) => res.json())
-      .then((data) => setUser(data.user));
-
-    fetchActions();
-  }, []);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!user) return;
-
-    const res = await fetch("/api/actions", {
+  const handleAddAction = async () => {
+    if (!action) return;
+    const res = await fetch("/api/actions/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ description: action }),
+      body: JSON.stringify({ name: action, userId: user.id }),
     });
+    const data = await res.json();
     if (res.ok) {
+      setActions([...actions, data.action]);
       setAction("");
-      fetchActions();
-      window.dispatchEvent(new Event("userUpdated")); // update header points
     }
   };
 
-  if (!user) return <p>Please log in to log actions.</p>;
+  useEffect(() => { fetchActions(); }, [user]);
+
+  if (!user) return <p>Please login to view actions.</p>;
 
   return (
-    <div>
-      <h2>Log an Action</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Describe your eco-friendly action"
-          value={action}
-          onChange={(e) => setAction(e.target.value)}
-          required
-        />
-        <button type="submit">Log Action</button>
-      </form>
-
-      <h3>Recent Actions</h3>
-      <ul>
-        {actions.map((a) => (
-          <li key={a.id}>{a.description}</li>
-        ))}
-      </ul>
+    <div className="page-container">
+      <h2>Log Daily Eco-Friendly Actions</h2>
+      <input value={action} onChange={(e) => setAction(e.target.value)} placeholder="e.g., Recycled paper" />
+      <button onClick={handleAddAction}>Add Action</button>
+      <ul>{actions.map((a) => <li key={a.id}>{a.name}</li>)}</ul>
     </div>
   );
 }

@@ -7,25 +7,24 @@ export default function Header() {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="navbar">
+    <nav className="navbar flex justify-between items-center p-4 bg-green-100 shadow-md">
       {/* Left side — EcoTrack Logo */}
-      <div className="logo">
+      <div className="logo text-xl font-bold text-green-700 flex items-center gap-2">
         <span>🌿</span> EcoTrack
       </div>
 
       {/* Right side navigation links */}
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className="flex items-center gap-4">
         <Link href="/">Home</Link>
-        <Link href="/dashboard">Dashboard</Link>
         <Link href="/goals">Goals</Link>
         <Link href="/actions">Actions</Link>
         <Link href="/recommendations">Recommendations</Link>
 
         {/* Show user info when logged in */}
         {user && (
-          <div className="user-info">
-            {user.email}
-            <span className="points-badge">
+          <div className="user-info flex items-center gap-2">
+            <span>{user.email}</span>
+            <span className="points-badge bg-green-200 text-green-800 px-2 py-1 rounded">
               {user.experienceLevel || 0} pts
             </span>
           </div>
@@ -33,9 +32,14 @@ export default function Header() {
 
         {/* Show Login or Logout */}
         {!user ? (
-          <Link href="/profile">Login</Link>
+          <Link href="/profile" className="text-green-700 font-medium">Profile</Link>
         ) : (
-          <button onClick={logout}>Logout</button>
+          <button
+            onClick={logout}
+            className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600"
+          >
+            Logout
+          </button>
         )}
       </div>
     </nav>
