@@ -71,3 +71,52 @@ p {
 .logo span {
   font-size: 24px; /* leaf size */
 }
+
+/* ===== USER INFO & POINTS ===== */
+.navbar .user-info {
+  margin-left: 20px;
+  font-style: italic;
+  color: #d1f2e5; /* light green */
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar .points-badge {
+  background-color: #f0fff0;
+  color: #2e8b57;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 14px;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.navbar button {
+  margin-left: 20px;
+  padding: 6px 12px;
+  background-color: #3cb371; /* medium sea green */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #2e8b57;
+}
+
+/* ===== RESPONSIVE NAVBAR ===== */
+.navbar {
+  flex-wrap: wrap;
+}
+
+.navbar a,
+.navbar button,
+.navbar .user-info {
+  margin-top: 8px;
+}
+

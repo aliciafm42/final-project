@@ -1,43 +1,64 @@
 "use client";
+
 import { useState, useEffect } from "react";
 
-export default function Actions() {
+export default function ActionsPage() {
+  const [user, setUser] = useState(null);
+  const [action, setAction] = useState("");
   const [actions, setActions] = useState([]);
-  const [desc, setDesc] = useState("");
+
+  const fetchActions = async () => {
+    const res = await fetch("/api/actions");
+    const data = await res.json();
+    setActions(data);
+  };
 
   useEffect(() => {
-    fetch("/api/actions")
+    fetch("/api/auth/me")
       .then((res) => res.json())
-      .then(setActions);
+      .then((data) => setUser(data.user));
+
+    fetchActions();
   }, []);
 
-  const addAction = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!user) return;
+
     const res = await fetch("/api/actions", {
       method: "POST",
-      body: JSON.stringify({ description: desc }),
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ description: action }),
     });
     if (res.ok) {
-      setActions([...actions, await res.json()]);
-      setDesc("");
+      setAction("");
+      fetchActions();
+      window.dispatchEvent(new Event("userUpdated")); // update header points
     }
   };
 
+  if (!user) return <p>Please log in to log actions.</p>;
+
   return (
-    <main>
-      <h1>Log Actions</h1>
-      <input
-        type="text"
-        value={desc}
-        onChange={(e) => setDesc(e.target.value)}
-        placeholder="What did you do today?"
-      />
-      <button onClick={addAction}>Add Action</button>
+    <div>
+      <h2>Log an Action</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Describe your eco-friendly action"
+          value={action}
+          onChange={(e) => setAction(e.target.value)}
+          required
+        />
+        <button type="submit">Log Action</button>
+      </form>
+
+      <h3>Recent Actions</h3>
       <ul>
         {actions.map((a) => (
           <li key={a.id}>{a.description}</li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }

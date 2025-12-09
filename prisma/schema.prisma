@@ -14,7 +14,8 @@ model User {
   createdAt       DateTime         @default(now())
   goals           Goal[]
   actions         Action[]
-  recommendations Recommendation[] // ✅ Add this back-relation
+  recommendations Recommendation[]
+  experienceLevel String?          // "beginner" or "experienced"
 }
 
 model Goal {

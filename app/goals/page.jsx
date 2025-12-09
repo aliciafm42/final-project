@@ -1,45 +1,58 @@
 "use client";
+
 import { useState, useEffect } from "react";
 
-export default function Goals() {
+export default function GoalsPage() {
+  const [user, setUser] = useState(null);
+  const [goal, setGoal] = useState("");
   const [goals, setGoals] = useState([]);
-  const [title, setTitle] = useState("");
+
+  const fetchGoals = async () => {
+    const res = await fetch("/api/goals");
+    const data = await res.json();
+    setGoals(data);
+  };
 
   useEffect(() => {
-    fetch("/api/goals")
+    fetch("/api/auth/me")
       .then((res) => res.json())
-      .then(setGoals);
+      .then((data) => setUser(data.user));
+
+    fetchGoals();
   }, []);
 
-  const addGoal = async () => {
+  const handleAddGoal = async (e) => {
+    e.preventDefault();
+    if (!user) return;
+
     const res = await fetch("/api/goals", {
       method: "POST",
-      body: JSON.stringify({ title }),
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title: goal }),
     });
     if (res.ok) {
-      setGoals([...goals, await res.json()]);
-      setTitle("");
+      setGoal("");
+      fetchGoals();
     }
   };
 
+  if (!user) return <p>Please log in to view goals.</p>;
+
   return (
-    <main>
-      <h1>Your Goals</h1>
-      <input
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="New Goal"
-      />
-      <button onClick={addGoal}>Add Goal</button>
+    <div>
+      <h2>Your Goals</h2>
+      <form onSubmit={handleAddGoal}>
+        <input type="text" value={goal} onChange={(e) => setGoal(e.target.value)} placeholder="New goal" required />
+        <button type="submit">Add Goal</button>
+      </form>
+
       <ul>
-        {goals.map((goal) => (
-          <li key={goal.id}>
-            {goal.title} {goal.completed ? "✅" : "❌"}
+        {goals.map((g) => (
+          <li key={g.id}>
+            {g.title} - {g.completed ? "Completed" : "Pending"}
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }

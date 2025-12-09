@@ -1,13 +1,44 @@
-import bcrypt from "bcrypt";
+import { compare } from "bcryptjs";
 import prisma from "@/lib/prisma";
+import jwt from "jsonwebtoken";
+import { serialize } from "cookie";
 
-export default async function handler(req, res) {
-  const { email, password } = JSON.parse(req.body);
-  const user = await prisma.user.findUnique({ where: { email } });
-  if (!user) return res.status(401).json({ error: "User not found" });
+export async function POST(req) {
+  try {
+    const { email, password } = await req.json();
 
-  const valid = await bcrypt.compare(password, user.password);
-  if (!valid) return res.status(401).json({ error: "Incorrect password" });
+    const user = await prisma.user.findUnique({ where: { email } });
+    if (!user) {
+      return new Response(JSON.stringify({ error: "User not found" }), { status: 404 });
+    }
 
-  res.status(200).json({ message: "Logged in", userId: user.id });
+    const isValid = await compare(password, user.password);
+    if (!isValid) {
+      return new Response(JSON.stringify({ error: "Incorrect password" }), { status: 401 });
+    }
+
+    // Create JWT token
+    const token = jwt.sign(
+      { id: user.id, email: user.email },
+      process.env.JWT_SECRET,
+      { expiresIn: "7d" }
+    );
+
+    // Set HTTP-only cookie
+    const cookie = serialize("authToken", token, {
+      httpOnly: true,
+      path: "/",
+      maxAge: 7 * 24 * 60 * 60, // 7 days
+      sameSite: "strict",
+      secure: process.env.NODE_ENV === "production",
+    });
+
+    return new Response(JSON.stringify({ message: "Login successful", user: { id: user.id, email: user.email } }), {
+      status: 200,
+      headers: { "Set-Cookie": cookie },
+    });
+  } catch (err) {
+    console.error(err);
+    return new Response(JSON.stringify({ error: "Login failed" }), { status: 500 });
+  }
 }

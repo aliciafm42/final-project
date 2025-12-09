@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 17, "column": 0}, "map": {"version":3,"sources":["file:///Users/aliciamartinez/Downloads/Final/app/profile/page.jsx"],"sourcesContent":["import SettingsForm from \"../../components/Profile/SettingsForm\";\n\nexport default function ProfilePage() {\n  return (\n    <div className=\"profile-page\">\n      <h2>Your Profile</h2>\n      <SettingsForm />\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;0BACb,8OAAC;0BAAG;;;;;;0BACJ,8OAAC,iJAAY;;;;;;;;;;;AAGnB"}}]
+}
