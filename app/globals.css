@@ -120,3 +120,28 @@ p {
   margin-top: 8px;
 }
 
+.input-field {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.green-button {
+  padding: 8px 16px;
+  background-color: #3cb371;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.green-button:hover {
+  background-color: #2e8b57;
+}

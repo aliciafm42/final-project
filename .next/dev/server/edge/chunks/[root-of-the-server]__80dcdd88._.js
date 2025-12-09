@@ -26,9 +26,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$prisma$2f$
 ;
 const globalForPrisma = globalThis;
 const prisma = globalForPrisma.prisma || new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$prisma$2f$client$2f$index$2d$browser$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["PrismaClient"]();
-if ("TURBOPACK compile-time truthy", 1) {
-    globalForPrisma.prisma = prisma;
-}
+if ("TURBOPACK compile-time truthy", 1) globalForPrisma.prisma = prisma;
 const __TURBOPACK__default__export__ = prisma;
 }),
 "[project]/auth.jsx [middleware-edge] (ecmascript)", ((__turbopack_context__) => {

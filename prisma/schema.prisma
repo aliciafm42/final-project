@@ -7,10 +7,43 @@ generator client {
   provider = "prisma-client-js"
 }
 
+enum ExperienceLevel {
+  BEGINNER
+  INTERMEDIATE
+  EXPERIENCED
+}
+
 model User {
-  id              Int       @id @default(autoincrement())
-  email           String    @unique
-  password        String    // hashed
-  experienceLevel String
-  createdAt       DateTime  @default(now())
+  id              Int              @id @default(autoincrement())
+  email           String           @unique
+  password        String
+  experienceLevel ExperienceLevel?
+  createdAt       DateTime         @default(now())
+  goals           Goal[]           @relation("UserGoals")
+  actions         Action[]         @relation("UserActions")
+  recommendations Recommendation[] @relation("UserRecommendations")
+}
+
+model Goal {
+  id        Int      @id @default(autoincrement())
+  text      String
+  createdAt DateTime @default(now())
+  userId    Int
+  user      User     @relation("UserGoals", fields: [userId], references: [id])
+}
+
+model Action {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now())
+  userId    Int
+  user      User     @relation("UserActions", fields: [userId], references: [id])
+}
+
+model Recommendation {
+  id        Int      @id @default(autoincrement())
+  text      String
+  createdAt DateTime @default(now())
+  userId    Int
+  user      User     @relation("UserRecommendations", fields: [userId], references: [id])
 }
