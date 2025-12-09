@@ -8,15 +8,16 @@ generator client {
 }
 
 model User {
-  id              Int      @id @default(autoincrement())
-  email           String   @unique
+  id              Int       @id @default(autoincrement())
+  email           String    @unique
   password        String
   experienceLevel String
-  createdAt       DateTime @default(now())
+  createdAt       DateTime  @default(now())
   goals           Goal[]
   actions         Action[]
   recommendations Recommendation[]
 }
+
 
 model Goal {
   id        Int      @id @default(autoincrement())

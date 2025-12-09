@@ -25,10 +25,12 @@ export default function ProfilePage() {
       });
 
       const data = await res.json();
+
       if (res.ok) {
         login(data.user);
         setMessage(isRegister ? "Registered!" : "Logged in!");
-        router.push("/dashboard"); // redirect to personalized page
+        setEmail(""); setPassword(""); setExperienceLevel("");
+        router.push("/dashboard");
       } else {
         setMessage(data.error || "Error");
       }

@@ -4,11 +4,10 @@ import bcrypt from "bcrypt";
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { email, password, experienceLevel } = req.body; // no JSON.parse
+  const { email, password, experienceLevel } = req.body;
 
-  if (!email || !password || !experienceLevel) {
+  if (!email || !password || !experienceLevel)
     return res.status(400).json({ error: "Missing fields" });
-  }
 
   try {
     const existingUser = await prisma.user.findUnique({ where: { email } });

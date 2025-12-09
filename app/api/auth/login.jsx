@@ -12,8 +12,8 @@ export default async function handler(req, res) {
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) return res.status(401).json({ error: "Invalid credentials" });
 
-    const valid = await bcrypt.compare(password, user.password);
-    if (!valid) return res.status(401).json({ error: "Invalid credentials" });
+    const match = await bcrypt.compare(password, user.password);
+    if (!match) return res.status(401).json({ error: "Invalid credentials" });
 
     res.status(200).json({ user: { id: user.id, email: user.email, experienceLevel: user.experienceLevel } });
   } catch (err) {
