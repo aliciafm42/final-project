@@ -32,7 +32,7 @@ export default function Header() {
 
         {/* Show Login or Logout */}
         {!user ? (
-          <Link href="/profile" className="text-green-700 font-medium">Profile</Link>
+          <Link href="/profile" className="text-green-700 font-medium">Login/Register</Link>
         ) : (
           <button
             onClick={logout}

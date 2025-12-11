@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap";
 /* [project]/app/globals.css [app-client] (css) */
+html, body, #__next {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +37,15 @@ body {
 
 .page-container {
   background-color: #ddf0d7;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.page-contain {
+  background-color: #fff;
   border-radius: 12px;
   max-width: 1000px;
   margin: 40px auto;

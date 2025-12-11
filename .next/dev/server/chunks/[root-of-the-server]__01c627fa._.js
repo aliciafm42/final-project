@@ -74,9 +74,7 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$bcrypt__$5b$external$5d$__
 ;
 async function POST(req) {
     try {
-        const body = await req.json();
-        const { email, password, experienceLevel } = body;
-        // Validate all fields explicitly
+        const { email, password, experienceLevel } = await req.json();
         if (!email || !password || !experienceLevel) {
             return new Response(JSON.stringify({
                 error: "Missing fields: email, password, and experienceLevel are required."
@@ -84,7 +82,6 @@ async function POST(req) {
                 status: 400
             });
         }
-        // Check for duplicate email
         const existingUser = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique({
             where: {
                 email
@@ -97,9 +94,7 @@ async function POST(req) {
                 status: 400
             });
         }
-        // Hash password
         const hashedPassword = await __TURBOPACK__imported__module__$5b$externals$5d2f$bcrypt__$5b$external$5d$__$28$bcrypt$2c$__cjs$29$__["default"].hash(password, 10);
-        // Create user
         const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.create({
             data: {
                 email,

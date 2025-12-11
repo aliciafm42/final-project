@@ -3,10 +3,8 @@ import bcrypt from "bcrypt";
 
 export async function POST(req) {
   try {
-    const body = await req.json();
-    const { email, password, experienceLevel } = body;
+    const { email, password, experienceLevel } = await req.json();
 
-    // Validate all fields explicitly
     if (!email || !password || !experienceLevel) {
       return new Response(
         JSON.stringify({ error: "Missing fields: email, password, and experienceLevel are required." }),
@@ -14,7 +12,6 @@ export async function POST(req) {
       );
     }
 
-    // Check for duplicate email
     const existingUser = await prisma.user.findUnique({
       where: { email },
     });
@@ -26,10 +23,8 @@ export async function POST(req) {
       );
     }
 
-    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create user
     const user = await prisma.user.create({
       data: {
         email,
