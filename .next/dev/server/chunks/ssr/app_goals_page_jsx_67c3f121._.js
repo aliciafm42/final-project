@@ -15,9 +15,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$js
 ;
 function GoalsPage() {
     const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
-    const [customGoal, setCustomGoal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [goals, setGoals] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    // Predefined sustainable action cards
+    const [selectedGoals, setSelectedGoals] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const sustainableActions = [
         "Bike to work/school 3x/week",
         "Reduce meat consumption",
@@ -32,30 +31,73 @@ function GoalsPage() {
     // Fetch user's goals from Neon database
     const fetchGoals = async ()=>{
         if (!user) return;
-        const res = await fetch("/api/goals/list?userId=" + user.id);
-        const data = await res.json();
-        setGoals(data.goals || []);
+        try {
+            const res = await fetch("/api/goals/list?userId=" + user.id);
+            const data = await res.json();
+            const normalizedGoals = (data.goals || []).map((g)=>typeof g === "string" ? {
+                    id: g,
+                    text: g
+                } : g);
+            setGoals(normalizedGoals);
+        } catch (err) {
+            console.error("Failed to fetch goals:", err);
+        }
     };
-    // Add goal (custom or from card) to database
-    const handleAddGoal = async (text)=>{
-        if (!text) return;
-        const res = await fetch("/api/goals/add", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                text,
-                userId: user.id
-            })
-        });
-        const data = await res.json();
-        if (res.ok) {
-            setGoals([
-                ...goals,
-                data.goal
+    // Toggle card selection
+    const toggleSelection = (action)=>{
+        setSelectedGoals((prev)=>prev.includes(action) ? prev.filter((g)=>g !== action) : [
+                ...prev,
+                action
             ]);
-            setCustomGoal("");
+    };
+    // Add selected goals
+    const handleAddSelectedGoals = async ()=>{
+        if (!selectedGoals.length) return;
+        const addedGoals = [];
+        for (let text of selectedGoals){
+            if (goals.some((g)=>g.text === text)) continue;
+            try {
+                const res = await fetch("/api/goals/add", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        text,
+                        userId: user.id
+                    })
+                });
+                const data = await res.json();
+                if (res.ok) addedGoals.push({
+                    id: data.goal.id || text,
+                    text
+                });
+            } catch (err) {
+                console.error("Failed to add goal:", err);
+            }
+        }
+        setGoals([
+            ...goals,
+            ...addedGoals
+        ]);
+        setSelectedGoals([]);
+    };
+    // Delete a goal
+    const handleDeleteGoal = async (goalId)=>{
+        try {
+            await fetch("/api/goals/delete", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    id: goalId,
+                    userId: user.id
+                })
+            });
+            setGoals((prev)=>prev.filter((g)=>g.id !== goalId));
+        } catch (err) {
+            console.error("Failed to delete goal:", err);
         }
     };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
@@ -68,86 +110,73 @@ function GoalsPage() {
         children: "Please login to view goals."
     }, void 0, false, {
         fileName: "[project]/app/goals/page.jsx",
-        lineNumber: 49,
-        columnNumber: 21
+        lineNumber: 89,
+        columnNumber: 7
     }, this);
+    // Show only actions not already added
+    const availableActions = sustainableActions.filter((action)=>!goals.some((g)=>g.text === action));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "page-contain max-w-3xl mx-auto p-6",
+        className: "page-contain max-w-5xl mx-auto p-6 text-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-3xl font-bold text-green-700 mb-6 text-center",
-                children: "Set Your Sustainable Goals"
+                className: "text-3xl font-bold text-green-700 mb-8",
+                children: "Pick Your Sustainable Goals"
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 53,
+                lineNumber: 101,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex gap-2 mb-6 justify-center",
+                className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 justify-items-center",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        type: "text",
-                        value: customGoal,
-                        onChange: (e)=>setCustomGoal(e.target.value),
-                        placeholder: "Add your own goal...",
-                        className: "flex-1 p-3 border rounded shadow focus:outline-none focus:ring-2 focus:ring-green-400"
+                    availableActions.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-gray-600",
+                        children: "You’ve added all available goals!"
                     }, void 0, false, {
                         fileName: "[project]/app/goals/page.jsx",
-                        lineNumber: 57,
-                        columnNumber: 9
+                        lineNumber: 108,
+                        columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>handleAddGoal(customGoal),
-                        className: "bg-green-700 text-white font-bold px-6 py-3 rounded hover:bg-green-800 transition",
-                        children: "Add"
-                    }, void 0, false, {
-                        fileName: "[project]/app/goals/page.jsx",
-                        lineNumber: 64,
-                        columnNumber: 9
-                    }, this)
+                    availableActions.map((action)=>{
+                        const isSelected = selectedGoals.includes(action);
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            onClick: ()=>toggleSelection(action),
+                            className: `cursor-pointer p-6 w-64 border rounded-lg transition-all duration-300 ${isSelected ? "bg-green-100 border-green-700 shadow-xl" : "bg-white border-green-700 hover:shadow-lg hover:bg-green-50"}`,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-green-700 font-medium text-lg",
+                                children: action
+                            }, void 0, false, {
+                                fileName: "[project]/app/goals/page.jsx",
+                                lineNumber: 122,
+                                columnNumber: 15
+                            }, this)
+                        }, action, false, {
+                            fileName: "[project]/app/goals/page.jsx",
+                            lineNumber: 113,
+                            columnNumber: 13
+                        }, this);
+                    })
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 56,
+                lineNumber: 106,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                className: "text-xl font-semibold mb-4",
-                children: "Pick from Suggested Actions:"
+            selectedGoals.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: handleAddSelectedGoals,
+                className: "bg-green-700 text-white font-bold px-10 py-3 rounded-lg hover:bg-green-800 transition mb-8",
+                children: "Add Selected Goals"
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 73,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8",
-                children: sustainableActions.map((action)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        onClick: ()=>handleAddGoal(action),
-                        className: "cursor-pointer p-4 border rounded-lg shadow hover:shadow-lg transition hover:bg-green-50",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-green-700 font-medium",
-                            children: action
-                        }, void 0, false, {
-                            fileName: "[project]/app/goals/page.jsx",
-                            lineNumber: 81,
-                            columnNumber: 13
-                        }, this)
-                    }, action, false, {
-                        fileName: "[project]/app/goals/page.jsx",
-                        lineNumber: 76,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
-                fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 74,
-                columnNumber: 7
+                lineNumber: 130,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                className: "text-xl font-semibold mb-4",
+                className: "text-2xl font-semibold mb-4",
                 children: "Your Goals:"
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 87,
+                lineNumber: 139,
                 columnNumber: 7
             }, this),
             goals.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -155,27 +184,44 @@ function GoalsPage() {
                 children: "No goals added yet."
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 89,
+                lineNumber: 141,
                 columnNumber: 9
-            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4",
-                children: goals.map((g)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                        className: "p-4 border rounded-lg shadow bg-white text-green-700 font-medium text-center",
-                        children: g.text
-                    }, g.id, false, {
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center",
+                children: goals.map((g)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "p-6 border rounded-lg shadow bg-white text-green-700 font-medium text-center w-64 flex justify-between items-center",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                children: g.text
+                            }, void 0, false, {
+                                fileName: "[project]/app/goals/page.jsx",
+                                lineNumber: 149,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>handleDeleteGoal(g.id),
+                                className: "text-red-600 font-bold hover:text-red-800 ml-2",
+                                children: "✕"
+                            }, void 0, false, {
+                                fileName: "[project]/app/goals/page.jsx",
+                                lineNumber: 150,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, g.id, true, {
                         fileName: "[project]/app/goals/page.jsx",
-                        lineNumber: 93,
+                        lineNumber: 145,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 91,
+                lineNumber: 143,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/goals/page.jsx",
-        lineNumber: 52,
+        lineNumber: 100,
         columnNumber: 5
     }, this);
 }
