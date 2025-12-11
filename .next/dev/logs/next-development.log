@@ -1,4 +1,34 @@
-[00:00:00.988] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.056] Server  LOG      ✓ Ready in 846ms
-[00:00:05.631] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:19.430] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.765] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.830] Server  LOG      ✓ Ready in 1617ms
+[00:00:06.892] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:21.749] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {textAlign}). If you meant to render a collection of children, use an array instead.
+[00:17:52.662] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:53.617] Browser ERROR   ./app/page.jsx:59:84
+Parsing ecmascript source code failed
+  57 |               src="https://images.unsplash.com/photo-1508873699372-7aeab60b44ab"
+  58 |               alt="Recycling"
+> 59 |               style={{ width: "150px", borderRadius: "10px", marginBottom: "12px", <p style={{textAlign: "center"}} ></img> }}
+     |                                                                                    ^
+  60 |             />
+  61 |             <h3 style={{ color: "#2e8b57", marginBottom: "8px", textAlign: "center" }}>Recycling</h3>
+  62 |             <p style={{textAlign: "center"}} >Recycling one aluminum can saves enough energy to power a TV for three hours.</p>
+
+Expression expected
+[00:20:53.992] Server  ERROR    ⨯ ReferenceError: auto is not defined
+[00:20:54.623] Browser ERROR   uncaughtError: ReferenceError: auto is not defined
+[00:21:49.972] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:43.822] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:32.407] Server  LOG      ✓ Compiled in 12ms
+[00:27:14.553] Server  LOG      ✓ Compiled in 11ms
+[00:27:20.933] Server  LOG      ✓ Compiled in 4ms
+[00:27:58.466] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:42.162] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:00.466] Server  LOG      ✓ Compiled in 8ms
+[00:30:04.881] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:59.238] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:00.147] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:20.922] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:54.306] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:58:46.720] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:01:04.764] Server  LOG      ✓ Compiled in 29ms
+[02:01:39.331] Server  LOG      ✓ Compiled in 5ms
