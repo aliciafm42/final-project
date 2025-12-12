@@ -4497,3 +4497,1874 @@ All exports of the module are statically known (It doesn't have dynamic exports)
 [04:00:22.315] Server  LOG      ✓ Compiled in 10ms
 [04:01:07.960] Browser ERROR   {}
 [04:02:24.042] Server  LOG      ✓ Compiled in 3ms
+[04:05:46.562] Server  LOG      ✓ Compiled in 25ms
+[04:06:28.369] Server  LOG      ✓ Compiled in 9ms
+[04:06:52.895] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.896] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.896] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.911] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.912] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.913] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.913] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.913] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.914] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.914] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.915] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.915] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.916] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.916] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.916] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.917] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.917] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.918] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.918] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.919] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.919] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.919] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.920] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.921] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.921] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.921] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.922] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.922] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.923] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.923] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:52.927] Server  LOG      ✓ Compiled in 35ms
+[04:06:53.472] Browser ERROR   ./components/Header.jsx:5:1
+Module not found: Can't resolve './header.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./header.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[04:07:16.851] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.853] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.854] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.855] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.855] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.856] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.857] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.858] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.859] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.860] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.861] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.861] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.862] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.862] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.863] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.863] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.864] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.864] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.865] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.866] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.866] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.867] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.867] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.867] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.868] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.869] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.869] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.869] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.870] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.870] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:16.893] Server  LOG      ✓ Compiled in 24ms
+[04:07:17.470] Browser ERROR   ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[04:07:27.470] Browser ERROR   ./components/Header.jsx:5:1
+Module not found: Can't resolve './globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "./globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[04:07:47.667] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.668] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.668] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.670] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.670] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.670] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.671] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.672] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.672] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.673] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.673] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.674] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.674] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.675] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.676] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.676] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.677] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.677] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.678] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.678] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.679] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.679] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.679] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.680] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.681] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.681] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.682] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.682] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.682] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.683] Server  ERROR    ⨯ ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:07:47.701] Server  LOG      ✓ Compiled in 8ms
+[04:07:48.469] Browser ERROR   ./components/Header.jsx:5:1
+Module not found: Can't resolve '../globals.css'
+  3 | import Link from "next/link";
+  4 | import { useAuth } from "@/context/AuthContext";
+> 5 | import "../globals.css"; // Make sure to create this file
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Header() {
+  8 |   const { user, logout } = useAuth();
+
+Import trace:
+  Server Component:
+    ./components/Header.jsx
+    ./app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[04:09:10.185] Server  LOG      ✓ Compiled in 6ms
+[04:09:50.453] Server  LOG      ✓ Compiled in 9ms

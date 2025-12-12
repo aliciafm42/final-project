@@ -10,7 +10,9 @@ export default function Header() {
     <nav className="navbar flex justify-between items-center p-4 bg-green-100 shadow-md">
       {/* Left side — EcoTrack Logo */}
       <div className="logo text-xl font-bold text-green-700 flex items-center gap-2">
-        <span>🌿</span> EcoTrack
+        <Link href="/">
+          <span>🌿 EcoTrack</span>
+        </Link>
       </div>
 
       {/* Right side navigation links */}
@@ -32,7 +34,9 @@ export default function Header() {
 
         {/* Show Login or Logout */}
         {!user ? (
-          <Link href="/profile" className="text-green-700 font-medium">Login/Register</Link>
+          <Link href="/profile" className="text-green-700 font-medium">
+            Login/Register
+          </Link>
         ) : (
           <button
             onClick={logout}
