@@ -55,96 +55,54 @@ const prisma = globalForPrisma.prisma || new __TURBOPACK__imported__module__$5b$
 if ("TURBOPACK compile-time truthy", 1) globalForPrisma.prisma = prisma;
 const __TURBOPACK__default__export__ = prisma;
 }),
-"[project]/app/api/actions/route.js [app-route] (ecmascript)", ((__turbopack_context__) => {
+"[project]/app/api/goals/delete/route.js [app-route] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
-    "GET",
-    ()=>GET,
-    "POST",
-    ()=>POST
+    "DELETE",
+    ()=>DELETE
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/prisma.jsx [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/prisma.jsx [app-route] (ecmascript)"); // Adjust this path to where your Prisma client is
 ;
-async function GET(req) {
+async function DELETE(req) {
     try {
-        const { searchParams } = new URL(req.url);
-        const userId = Number(searchParams.get("userId"));
-        if (!userId || isNaN(userId)) {
+        const body = await req.json();
+        const { id, userId } = body;
+        if (!id || !userId) {
             return new Response(JSON.stringify({
-                error: "Invalid or missing userId"
+                error: "Missing goal ID or user ID"
             }), {
                 status: 400
             });
         }
-        const goals = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.findMany({
+        // Check if the goal exists and belongs to this user
+        const goal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].goal.findUnique({
             where: {
-                userId
-            },
-            orderBy: {
-                createdAt: "desc"
+                id: Number(id)
             }
         });
-        return new Response(JSON.stringify({
-            goals
-        }), {
-            status: 200
-        });
-    } catch (err) {
-        console.error("GET /api/actions error:", err);
-        return new Response(JSON.stringify({
-            error: "Internal Server Error"
-        }), {
-            status: 500
-        });
-    }
-}
-async function POST(req) {
-    try {
-        const { goalId, userId, increment = 1 } = await req.json();
-        const id = Number(goalId);
-        const uid = Number(userId);
-        const inc = Number(increment);
-        if (!id || isNaN(id) || !uid || isNaN(uid) || isNaN(inc)) {
+        if (!goal || goal.userId !== userId) {
             return new Response(JSON.stringify({
-                error: "Invalid input"
-            }), {
-                status: 400
-            });
-        }
-        // Make sure the goal exists for this user
-        const goal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.findFirst({
-            where: {
-                id,
-                userId: uid
-            }
-        });
-        if (!goal) {
-            return new Response(JSON.stringify({
-                error: "Goal not found for this user"
+                error: "Goal not found or unauthorized"
             }), {
                 status: 404
             });
         }
-        // Increment progress safely, max 10
-        const newProgress = Math.min((goal.progress || 0) + inc, 10);
-        const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        // Delete the goal (related actions will be deleted if Prisma cascade is set)
+        await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].goal.delete({
             where: {
-                id
-            },
-            data: {
-                progress: newProgress
+                id: Number(id)
             }
         });
         return new Response(JSON.stringify({
-            goal: updatedGoal
+            success: true
         }), {
             status: 200
         });
     } catch (err) {
-        console.error("POST /api/actions error:", err);
+        console.error("DELETE error:", err);
         return new Response(JSON.stringify({
-            error: "Internal Server Error"
+            error: err.message
         }), {
             status: 500
         });
@@ -153,4 +111,4 @@ async function POST(req) {
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__0ada7284._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__735347e7._.js.map

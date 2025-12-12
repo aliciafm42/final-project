@@ -32,7 +32,6 @@ function GoalsPage() {
         "Buy local products",
         "Save energy at home"
     ];
-    // Fetch user's goals from Neon database
     const fetchGoals = async ()=>{
         if (!user) return;
         try {
@@ -87,24 +86,6 @@ function GoalsPage() {
         ]);
         setSelectedGoals([]);
     };
-    const handleDeleteGoal = async (goalId)=>{
-        try {
-            await fetch("/api/goals/delete", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    id: goalId,
-                    userId: user.id
-                })
-            });
-            setGoals((prev)=>prev.filter((g)=>g.id !== goalId));
-        } catch (err) {
-            console.error("Failed to delete goal:", err);
-        }
-    };
-    // If user is not logged in
     if (!user) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "page-contain",
@@ -116,14 +97,14 @@ function GoalsPage() {
                     children: "Set Your Eco Goals"
                 }, void 0, false, {
                     fileName: "[project]/app/goals/page.jsx",
-                    lineNumber: 87,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     children: "Start small, stay consistent, and watch your eco-friendly impact grow over time."
                 }, void 0, false, {
                     fileName: "[project]/app/goals/page.jsx",
-                    lineNumber: 88,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -136,17 +117,16 @@ function GoalsPage() {
                     children: "Login or Register"
                 }, void 0, false, {
                     fileName: "[project]/app/goals/page.jsx",
-                    lineNumber: 89,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/goals/page.jsx",
-            lineNumber: 86,
+            lineNumber: 71,
             columnNumber: 7
         }, this);
     }
-    // Available actions not already added
     const availableActions = sustainableActions.filter((action)=>!goals.some((g)=>g.text === action));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "page-contain max-w-5xl mx-auto p-6 text-center",
@@ -156,7 +136,7 @@ function GoalsPage() {
                 children: "Pick Your Sustainable Goals"
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 107,
+                lineNumber: 91,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -167,8 +147,8 @@ function GoalsPage() {
                         children: "You’ve added all available goals!"
                     }, void 0, false, {
                         fileName: "[project]/app/goals/page.jsx",
-                        lineNumber: 111,
-                        columnNumber: 11
+                        lineNumber: 94,
+                        columnNumber: 43
                     }, this),
                     availableActions.map((action)=>{
                         const isSelected = selectedGoals.includes(action);
@@ -180,19 +160,19 @@ function GoalsPage() {
                                 children: action
                             }, void 0, false, {
                                 fileName: "[project]/app/goals/page.jsx",
-                                lineNumber: 125,
+                                lineNumber: 107,
                                 columnNumber: 15
                             }, this)
                         }, action, false, {
                             fileName: "[project]/app/goals/page.jsx",
-                            lineNumber: 116,
+                            lineNumber: 98,
                             columnNumber: 13
                         }, this);
                     })
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 109,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             selectedGoals.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -201,7 +181,7 @@ function GoalsPage() {
                 children: "Add Selected Goals"
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 132,
+                lineNumber: 114,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -209,7 +189,7 @@ function GoalsPage() {
                 children: "Your Goals:"
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 140,
+                lineNumber: 122,
                 columnNumber: 7
             }, this),
             goals.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -217,44 +197,27 @@ function GoalsPage() {
                 children: "No goals added yet."
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 142,
+                lineNumber: 124,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center",
                 children: goals.map((g)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "p-6 border rounded-lg shadow bg-white text-green-700 font-medium text-center w-64 flex justify-between items-center",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: g.text
-                            }, void 0, false, {
-                                fileName: "[project]/app/goals/page.jsx",
-                                lineNumber: 150,
-                                columnNumber: 15
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>handleDeleteGoal(g.id),
-                                className: "text-red-600 font-bold hover:text-red-800 ml-2",
-                                children: "✕"
-                            }, void 0, false, {
-                                fileName: "[project]/app/goals/page.jsx",
-                                lineNumber: 151,
-                                columnNumber: 15
-                            }, this)
-                        ]
-                    }, g.id, true, {
+                        className: "p-6 border rounded-lg shadow bg-white text-green-700 font-medium text-center w-64",
+                        children: g.text
+                    }, g.id, false, {
                         fileName: "[project]/app/goals/page.jsx",
-                        lineNumber: 146,
+                        lineNumber: 128,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/goals/page.jsx",
-                lineNumber: 144,
+                lineNumber: 126,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/goals/page.jsx",
-        lineNumber: 106,
+        lineNumber: 90,
         columnNumber: 5
     }, this);
 }

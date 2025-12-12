@@ -1,0 +1,3 @@
+{
+  "/api/goals/delete/route": "app/api/goals/delete/route.js"
+}

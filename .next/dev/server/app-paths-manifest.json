@@ -1,8 +1,12 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/actions/page": "app/actions/page.js",
+  "/api/actions/route": "app/api/actions/route.js",
+  "/api/actions/update/route": "app/api/actions/update/route.js",
   "/api/auth/login/route": "app/api/auth/login/route.js",
   "/api/auth/register/route": "app/api/auth/register/route.js",
+  "/api/goals/add/route": "app/api/goals/add/route.js",
+  "/api/goals/delete/route": "app/api/goals/delete/route.js",
   "/api/goals/list/route": "app/api/goals/list/route.js",
   "/api/recommendations/route": "app/api/recommendations/route.js",
   "/goals/page": "app/goals/page.js",

@@ -28,16 +28,24 @@ model Goal {
   id        Int      @id @default(autoincrement())
   text      String
   createdAt DateTime @default(now())
+  progress  Int      @default(0)
   userId    Int
   user      User     @relation("UserGoals", fields: [userId], references: [id])
+
+  // Relation to actions
+  actions Action[] @relation("GoalActions") // cascade is applied on the foreign key side
 }
 
 model Action {
   id        Int      @id @default(autoincrement())
   name      String
   createdAt DateTime @default(now())
-  userId    Int
-  user      User     @relation("UserActions", fields: [userId], references: [id])
+
+  goalId Int?
+  goal   Goal? @relation("GoalActions", fields: [goalId], references: [id], onDelete: Cascade) // foreign key side
+
+  userId Int
+  user   User @relation("UserActions", fields: [userId], references: [id])
 }
 
 model Recommendation {

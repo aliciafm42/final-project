@@ -8,8 +8,8 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/AuthContext.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/AuthContext.jsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -19,44 +19,54 @@ var _s = __turbopack_context__.k.signature();
 function ActionsPage() {
     _s();
     const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
-    const [action, setAction] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const [actions, setActions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const fetchActions = async ()=>{
-        if (!user) return;
-        const res = await fetch("/api/actions/list?userId=" + user.id);
-        const data = await res.json();
-        setActions(data.actions || []);
-    };
-    const handleAddAction = async ()=>{
-        if (!action) return;
-        const res = await fetch("/api/actions/add", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name: action,
-                userId: user.id
-            })
-        });
-        const data = await res.json();
-        if (res.ok) {
-            setActions([
-                ...actions,
-                data.action
-            ]);
-            setAction("");
+    const [goals, setGoals] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    // Fetch user's goals
+    const fetchGoals = async ()=>{
+        if (!user?.id) return;
+        setLoading(true);
+        setError("");
+        try {
+            const res = await fetch(`/api/actions?userId=${user.id}`);
+            if (!res.ok) throw new Error(`Failed to fetch: ${res.statusText}`);
+            const data = await res.json();
+            // Ensure progress is always a number
+            const normalizedGoals = (data.goals || []).map((g)=>({
+                    ...g,
+                    progress: g.progress ?? 0
+                }));
+            setGoals(normalizedGoals);
+        } catch (err) {
+            console.error("Error fetching goals:", err);
+            setError("Failed to load goals. Please try again.");
+        } finally{
+            setLoading(false);
         }
+    };
+    // Add progress locally
+    const addProgressLocal = (goalId, increment)=>{
+        const inc = Number(increment);
+        if (!inc || inc <= 0) return;
+        setGoals((prevGoals)=>prevGoals.map((g)=>{
+                if (g.id === goalId) {
+                    const newProgress = Math.min((g.progress || 0) + inc, 10);
+                    return {
+                        ...g,
+                        progress: newProgress
+                    };
+                }
+                return g;
+            }));
     };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ActionsPage.useEffect": ()=>{
-            fetchActions();
+            fetchGoals();
         }
     }["ActionsPage.useEffect"], [
         user
     ]);
-    // UI for users not logged in
-    // UI for users not logged in
+    // Not logged in UI
     if (!user) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "page-contain",
@@ -65,18 +75,18 @@ function ActionsPage() {
             },
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    children: "Eco Actions Tracker"
+                    children: "Set Your Eco Goals"
                 }, void 0, false, {
                     fileName: "[project]/app/actions/page.jsx",
-                    lineNumber: 40,
-                    columnNumber: 7
+                    lineNumber: 60,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    children: "Track your daily eco-friendly habits and make a positive impact on the planet! Recycle, save energy, and see your progress over time."
+                    children: "Start small, stay consistent, and watch your eco-friendly impact grow over time."
                 }, void 0, false, {
                     fileName: "[project]/app/actions/page.jsx",
-                    lineNumber: 41,
-                    columnNumber: 7
+                    lineNumber: 61,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     href: "/profile",
@@ -88,79 +98,169 @@ function ActionsPage() {
                     children: "Login or Register"
                 }, void 0, false, {
                     fileName: "[project]/app/actions/page.jsx",
-                    lineNumber: 44,
-                    columnNumber: 7
+                    lineNumber: 62,
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/actions/page.jsx",
-            lineNumber: 39,
-            columnNumber: 5
+            lineNumber: 59,
+            columnNumber: 7
         }, this);
     }
-    // UI for logged in users
+    // Logged in UI
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "page-container",
+        style: {
+            padding: "20px"
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                children: "Log Daily Eco-Friendly Actions"
+                children: "Your Eco-Friendly Goals"
             }, void 0, false, {
                 fileName: "[project]/app/actions/page.jsx",
-                lineNumber: 59,
+                lineNumber: 76,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                type: "text",
-                value: action,
-                onChange: (e)=>setAction(e.target.value),
-                placeholder: "e.g., Recycled paper",
-                className: "input-field"
+            loading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: "Loading your goals..."
             }, void 0, false, {
                 fileName: "[project]/app/actions/page.jsx",
-                lineNumber: 60,
-                columnNumber: 7
+                lineNumber: 77,
+                columnNumber: 19
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                onClick: handleAddAction,
-                className: "green-button",
-                children: "Add Action"
+            error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                style: {
+                    color: "red"
+                },
+                children: error
             }, void 0, false, {
                 fileName: "[project]/app/actions/page.jsx",
-                lineNumber: 67,
-                columnNumber: 7
+                lineNumber: 78,
+                columnNumber: 17
+            }, this),
+            !loading && goals.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: "No goals yet. Add some in your profile!"
+            }, void 0, false, {
+                fileName: "[project]/app/actions/page.jsx",
+                lineNumber: 79,
+                columnNumber: 42
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                 style: {
-                    marginTop: "20px",
-                    paddingLeft: "0",
-                    listStyle: "none"
+                    listStyle: "none",
+                    padding: 0,
+                    marginTop: "20px"
                 },
-                children: actions.map((a)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                children: goals.map((goal)=>{
+                    const progress = goal.progress ?? 0;
+                    const maxAdd = 10 - progress;
+                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         style: {
                             backgroundColor: "#DDF0D7",
-                            padding: "10px 15px",
                             borderRadius: "8px",
-                            marginBottom: "10px"
+                            padding: "15px",
+                            marginBottom: "15px"
                         },
-                        children: a.name
-                    }, a.id, false, {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "10px"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        style: {
+                                            flex: 1
+                                        },
+                                        children: goal.text
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/actions/page.jsx",
+                                        lineNumber: 97,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: [
+                                            progress,
+                                            "/10"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/actions/page.jsx",
+                                        lineNumber: 98,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "number",
+                                        min: "1",
+                                        max: maxAdd.toString(),
+                                        placeholder: "Add number",
+                                        style: {
+                                            width: "60px",
+                                            padding: "5px"
+                                        },
+                                        onChange: (e)=>{
+                                            const val = Math.min(Number(e.target.value), maxAdd);
+                                            if (val > 0) {
+                                                addProgressLocal(goal.id, val);
+                                                e.target.value = "";
+                                            }
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/actions/page.jsx",
+                                        lineNumber: 100,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/actions/page.jsx",
+                                lineNumber: 96,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    height: "8px",
+                                    backgroundColor: "#a8e6a1",
+                                    borderRadius: "4px",
+                                    marginTop: "10px",
+                                    overflow: "hidden"
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        width: `${progress / 10 * 100}%`,
+                                        height: "100%",
+                                        backgroundColor: "#2e8b57",
+                                        transition: "width 0.3s"
+                                    }
+                                }, void 0, false, {
+                                    fileName: "[project]/app/actions/page.jsx",
+                                    lineNumber: 125,
+                                    columnNumber: 17
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/actions/page.jsx",
+                                lineNumber: 116,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, goal.id, true, {
                         fileName: "[project]/app/actions/page.jsx",
-                        lineNumber: 73,
-                        columnNumber: 11
-                    }, this))
+                        lineNumber: 87,
+                        columnNumber: 13
+                    }, this);
+                })
             }, void 0, false, {
                 fileName: "[project]/app/actions/page.jsx",
-                lineNumber: 71,
+                lineNumber: 81,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/actions/page.jsx",
-        lineNumber: 58,
+        lineNumber: 75,
         columnNumber: 5
     }, this);
 }
-_s(ActionsPage, "vaXoAzmznt7e5AVcIZsL706fc50=", false, function() {
+_s(ActionsPage, "MzN3FLlk6fJsjGo3o3dyWoEX6GI=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];

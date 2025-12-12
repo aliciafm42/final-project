@@ -21,7 +21,6 @@ export default function GoalsPage() {
     "Save energy at home",
   ];
 
-  // Fetch user's goals from Neon database
   const fetchGoals = async () => {
     if (!user) return;
     try {
@@ -67,20 +66,6 @@ export default function GoalsPage() {
     setSelectedGoals([]);
   };
 
-  const handleDeleteGoal = async (goalId) => {
-    try {
-      await fetch("/api/goals/delete", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: goalId, userId: user.id }),
-      });
-      setGoals((prev) => prev.filter((g) => g.id !== goalId));
-    } catch (err) {
-      console.error("Failed to delete goal:", err);
-    }
-  };
-
-  // If user is not logged in
   if (!user) {
     return (
       <div className="page-contain" style={{ textAlign: "center" }}>
@@ -97,7 +82,6 @@ export default function GoalsPage() {
     );
   }
 
-  // Available actions not already added
   const availableActions = sustainableActions.filter(
     (action) => !goals.some((g) => g.text === action)
   );
@@ -107,9 +91,7 @@ export default function GoalsPage() {
       <h2 className="text-3xl font-bold text-green-700 mb-8">Pick Your Sustainable Goals</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 justify-items-center">
-        {availableActions.length === 0 && (
-          <p className="text-gray-600">You’ve added all available goals!</p>
-        )}
+        {availableActions.length === 0 && <p className="text-gray-600">You’ve added all available goals!</p>}
         {availableActions.map((action) => {
           const isSelected = selectedGoals.includes(action);
           return (
@@ -145,15 +127,9 @@ export default function GoalsPage() {
           {goals.map((g) => (
             <div
               key={g.id}
-              className="p-6 border rounded-lg shadow bg-white text-green-700 font-medium text-center w-64 flex justify-between items-center"
+              className="p-6 border rounded-lg shadow bg-white text-green-700 font-medium text-center w-64"
             >
-              <span>{g.text}</span>
-              <button
-                onClick={() => handleDeleteGoal(g.id)}
-                className="text-red-600 font-bold hover:text-red-800 ml-2"
-              >
-                ✕
-              </button>
+              {g.text}
             </div>
           ))}
         </div>

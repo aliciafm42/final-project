@@ -55,94 +55,54 @@ const prisma = globalForPrisma.prisma || new __TURBOPACK__imported__module__$5b$
 if ("TURBOPACK compile-time truthy", 1) globalForPrisma.prisma = prisma;
 const __TURBOPACK__default__export__ = prisma;
 }),
-"[project]/app/api/actions/route.js [app-route] (ecmascript)", ((__turbopack_context__) => {
+"[project]/app/api/actions/update/route.js [app-route] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
-    "GET",
-    ()=>GET,
-    "POST",
-    ()=>POST
+    "PATCH",
+    ()=>PATCH
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/prisma.jsx [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/prisma.jsx [app-route] (ecmascript)"); // Make sure prisma client is default-exported
 ;
-async function GET(req) {
+async function PATCH(req) {
     try {
-        const { searchParams } = new URL(req.url);
-        const userId = Number(searchParams.get("userId"));
-        if (!userId || isNaN(userId)) {
+        const { id, progressIncrement, userId } = await req.json();
+        if (!id || !progressIncrement || !userId) {
             return new Response(JSON.stringify({
-                error: "Invalid or missing userId"
+                error: "Missing data"
             }), {
                 status: 400
             });
         }
-        const goals = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.findMany({
+        // Fetch existing goal
+        const goal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].goal.findFirst({
             where: {
-                userId
-            },
-            orderBy: {
-                createdAt: "desc"
-            }
-        });
-        return new Response(JSON.stringify({
-            goals
-        }), {
-            status: 200
-        });
-    } catch (err) {
-        console.error("GET /api/actions error:", err);
-        return new Response(JSON.stringify({
-            error: "Internal Server Error"
-        }), {
-            status: 500
-        });
-    }
-}
-async function POST(req) {
-    try {
-        const { goalId, userId, increment = 1 } = await req.json();
-        const id = Number(goalId);
-        const uid = Number(userId);
-        const inc = Number(increment);
-        if (!id || isNaN(id) || !uid || isNaN(uid) || isNaN(inc)) {
-            return new Response(JSON.stringify({
-                error: "Invalid input"
-            }), {
-                status: 400
-            });
-        }
-        // Make sure the goal exists for this user
-        const goal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.findFirst({
-            where: {
-                id,
-                userId: uid
+                id: Number(id),
+                userId: Number(userId)
             }
         });
         if (!goal) {
             return new Response(JSON.stringify({
-                error: "Goal not found for this user"
+                error: "Goal not found"
             }), {
                 status: 404
             });
         }
-        // Increment progress safely, max 10
-        const newProgress = Math.min((goal.progress || 0) + inc, 10);
-        const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        // Update progress (max 10)
+        const newProgress = Math.min((goal.progress || 0) + progressIncrement, 10);
+        const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].goal.update({
             where: {
-                id
+                id: Number(id)
             },
             data: {
                 progress: newProgress
             }
         });
-        return new Response(JSON.stringify({
-            goal: updatedGoal
-        }), {
+        return new Response(JSON.stringify(updatedGoal), {
             status: 200
         });
     } catch (err) {
-        console.error("POST /api/actions error:", err);
+        console.error("Failed to update goal:", err);
         return new Response(JSON.stringify({
             error: "Internal Server Error"
         }), {
@@ -153,4 +113,4 @@ async function POST(req) {
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__0ada7284._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__3dad03a4._.js.map

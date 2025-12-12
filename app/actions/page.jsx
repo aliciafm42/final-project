@@ -1,87 +1,139 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
+import { useAuth } from "@/context/AuthContext";
 
 export default function ActionsPage() {
   const { user } = useAuth();
-  const [action, setAction] = useState("");
-  const [actions, setActions] = useState([]);
+  const [goals, setGoals] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  const fetchActions = async () => {
-    if (!user) return;
-    const res = await fetch("/api/actions/list?userId=" + user.id);
-    const data = await res.json();
-    setActions(data.actions || []);
-  };
-
-  const handleAddAction = async () => {
-    if (!action) return;
-    const res = await fetch("/api/actions/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: action, userId: user.id }),
-    });
-    const data = await res.json();
-    if (res.ok) {
-      setActions([...actions, data.action]);
-      setAction("");
+  // Fetch user's goals
+  const fetchGoals = async () => {
+    if (!user?.id) return;
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch(`/api/actions?userId=${user.id}`);
+      if (!res.ok) throw new Error(`Failed to fetch: ${res.statusText}`);
+      const data = await res.json();
+      // Ensure progress is always a number
+      const normalizedGoals = (data.goals || []).map(g => ({
+        ...g,
+        progress: g.progress ?? 0
+      }));
+      setGoals(normalizedGoals);
+    } catch (err) {
+      console.error("Error fetching goals:", err);
+      setError("Failed to load goals. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
-  useEffect(() => { fetchActions(); }, [user]);
+  // Add progress locally
+  const addProgressLocal = (goalId, increment) => {
+    const inc = Number(increment);
+    if (!inc || inc <= 0) return;
 
-  // UI for users not logged in
-// UI for users not logged in
-if (!user) {
+    setGoals(prevGoals =>
+      prevGoals.map(g => {
+        if (g.id === goalId) {
+          const newProgress = Math.min((g.progress || 0) + inc, 10);
+          return { ...g, progress: newProgress };
+        }
+        return g;
+      })
+    );
+  };
+
+  useEffect(() => {
+    fetchGoals();
+  }, [user]);
+
+  // Not logged in UI
+  if (!user) {
+    return (
+      <div className="page-contain" style={{ textAlign: "center" }}>
+        <h1>Set Your Eco Goals</h1>
+        <p>Start small, stay consistent, and watch your eco-friendly impact grow over time.</p>
+        <Link
+          href="/profile"
+          className="green-button"
+          style={{ marginTop: "30px", display: "inline-block" }}
+        >
+          Login or Register
+        </Link>
+      </div>
+    );
+  }
+
+  // Logged in UI
   return (
-    <div className="page-contain" style={{ textAlign: "center" }}>
-      <h1>Eco Actions Tracker</h1>
-      <p>
-        Track your daily eco-friendly habits and make a positive impact on the planet! Recycle, save energy, and see your progress over time.
-      </p>
-      <Link 
-        href="/profile" 
-        className="green-button" 
-        style={{ marginTop: "30px", display: "inline-block" }} // added bigger gap
-      >
-        Login or Register
-      </Link>
-    </div>
-  );
-}
+    <div style={{ padding: "20px" }}>
+      <h2>Your Eco-Friendly Goals</h2>
+      {loading && <p>Loading your goals...</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      {!loading && goals.length === 0 && <p>No goals yet. Add some in your profile!</p>}
 
+      <ul style={{ listStyle: "none", padding: 0, marginTop: "20px" }}>
+        {goals.map(goal => {
+          const progress = goal.progress ?? 0;
+          const maxAdd = 10 - progress;
 
-  // UI for logged in users
-  return (
-    <div className="page-container">
-      <h2>Log Daily Eco-Friendly Actions</h2>
-      <input
-        type="text"
-        value={action}
-        onChange={(e) => setAction(e.target.value)}
-        placeholder="e.g., Recycled paper"
-        className="input-field"
-      />
-      <button onClick={handleAddAction} className="green-button">
-        Add Action
-      </button>
+          return (
+            <li
+              key={goal.id}
+              style={{
+                backgroundColor: "#DDF0D7",
+                borderRadius: "8px",
+                padding: "15px",
+                marginBottom: "15px",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <span style={{ flex: 1 }}>{goal.text}</span>
+                <span>{progress}/10</span>
 
-      <ul style={{ marginTop: "20px", paddingLeft: "0", listStyle: "none" }}>
-        {actions.map((a) => (
-          <li
-            key={a.id}
-            style={{
-              backgroundColor: "#DDF0D7",
-              padding: "10px 15px",
-              borderRadius: "8px",
-              marginBottom: "10px",
-            }}
-          >
-            {a.name}
-          </li>
-        ))}
+                <input
+                  type="number"
+                  min="1"
+                  max={maxAdd.toString()}
+                  placeholder="Add number"
+                  style={{ width: "60px", padding: "5px" }}
+                  onChange={e => {
+                    const val = Math.min(Number(e.target.value), maxAdd);
+                    if (val > 0) {
+                      addProgressLocal(goal.id, val);
+                      e.target.value = "";
+                    }
+                  }}
+                />
+              </div>
+
+              <div
+                style={{
+                  height: "8px",
+                  backgroundColor: "#a8e6a1",
+                  borderRadius: "4px",
+                  marginTop: "10px",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    width: `${(progress / 10) * 100}%`,
+                    height: "100%",
+                    backgroundColor: "#2e8b57",
+                    transition: "width 0.3s",
+                  }}
+                />
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

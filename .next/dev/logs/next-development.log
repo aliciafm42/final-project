@@ -2536,3 +2536,1964 @@ Import traces:
 [02:28:09.332] Server  LOG      ✓ Compiled in 4ms
 [02:28:17.636] Server  LOG      ✓ Compiled in 15ms
 [02:29:29.919] Server  LOG      ✓ Compiled in 2ms
+[02:36:03.857] Server  LOG      ✓ Compiled in 11ms
+[02:36:52.812] Browser ERROR   Error fetching goals: {}
+[02:36:52.812] Browser ERROR   Error fetching goals: {}
+[02:38:07.784] Server  LOG      ✓ Compiled in 10ms
+[02:39:25.371] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:122:164
+
+  119 }), {
+  120     status: 404
+  121 });
+→ 122 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:39:26.470] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:122:164
+
+  119 }), {
+  120     status: 404
+  121 });
+→ 122 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:39:27.382] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:122:164
+
+  119 }), {
+  120     status: 404
+  121 });
+→ 122 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 1
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:40:59.307] Server  LOG      ✓ Compiled in 7ms
+[02:41:06.778] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:122:164
+
+  119 }), {
+  120     status: 404
+  121 });
+→ 122 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:41:06.883] Browser ERROR   Failed to log action
+[02:42:04.523] Server  LOG      ✓ Compiled in 3ms
+[02:42:08.338] Server  ERROR   Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:122:164
+
+  119 }), {
+  120     status: 404
+  121 });
+→ 122 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:42:08.442] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:43:13.547] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:43:14.973] Server  LOG     POST body: {}
+[02:43:15.020] Server  LOG     Found goal: {}
+[02:43:15.095] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:138:164
+
+  135     });
+  136 }
+  137 // Increment progress safely
+→ 138 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:43:15.200] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:44:51.668] Server  LOG      ✓ Compiled in 6ms
+[02:44:55.294] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:44:56.440] Server  LOG     POST body: {}
+[02:44:56.483] Server  LOG     Found goal: {}
+[02:44:56.563] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:138:164
+
+  135     });
+  136 }
+  137 // Increment progress safely
+→ 138 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:44:56.668] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:46:58.211] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:46:59.555] Server  LOG     POST body: {}
+[02:46:59.599] Server  LOG     Found goal: {}
+[02:46:59.666] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:138:164
+
+  135     });
+  136 }
+  137 // Increment progress safely
+→ 138 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:46:59.771] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:48:17.463] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:48:18.595] Server  LOG     POST body: {}
+[02:48:18.635] Server  LOG     Found goal: {}
+[02:48:18.711] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:138:164
+
+  135     });
+  136 }
+  137 // Increment progress safely
+→ 138 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:48:18.814] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:48:20.769] Server  LOG     POST body: {}
+[02:48:20.814] Server  LOG     Found goal: {}
+[02:48:20.893] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:138:164
+
+  135     });
+  136 }
+  137 // Increment progress safely
+→ 138 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 1
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:48:20.998] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:50:03.545] Server  LOG     POST body: {}
+[02:50:03.593] Server  LOG     Found goal: {}
+[02:50:03.663] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:138:164
+
+  135     });
+  136 }
+  137 // Increment progress safely
+→ 138 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:50:03.766] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:51:57.636] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:51:57.786] Browser ERROR   Error fetching goals: {"message":"Failed to execute 'json' on 'Response': Unexpected end of JSON input"}
+[02:54:07.593] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:54:08.975] Server  LOG     POST body: {}
+[02:54:09.020] Server  LOG     Found goal: {}
+[02:54:09.096] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:138:164
+
+  135     });
+  136 }
+  137 // Increment progress safely
+→ 138 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:54:09.200] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:57:25.139] Server  LOG      ✓ Compiled in 3ms
+[02:57:30.595] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:126:164
+
+  123     });
+  124 }
+  125 // Increment progress safely, capped at 10
+→ 126 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:57:30.699] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:58:15.320] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:58:16.721] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:126:164
+
+  123     });
+  124 }
+  125 // Increment progress safely, capped at 10
+→ 126 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:58:16.825] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[02:59:39.829] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:59:41.215] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:126:164
+
+  123     });
+  124 }
+  125 // Increment progress safely, capped at 10
+→ 126 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[02:59:41.321] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:01:06.906] Server  LOG      ✓ Compiled in 8ms
+[03:01:11.348] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:126:164
+
+  123     });
+  124 }
+  125 // Increment progress safely, capped at 10
+→ 126 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:01:11.451] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:01:55.958] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:01:56.084] Browser ERROR   Error fetching goals: {}
+[03:02:34.662] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:02:36.578] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:128:164
+
+  125         status: 404
+  126     });
+  127 }
+→ 128 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 2
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:02:36.682] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:04:15.548] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:04:16.762] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:144
+
+  128 // Increment progress safely, capped at 10
+  129 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  130 // Use updateMany to prevent Prisma errors if goal doesn’t exist for user
+→ 131 await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany({
+        where: {
+          id: 2,
+          userId: 1
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateManyMutationInput. Did you mean `text`? Available args:
+type GoalUpdateManyMutationInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+}
+
+
+[03:04:16.867] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:04:36.797] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:04:46.787] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:144
+
+  128 // Increment progress safely, capped at 10
+  129 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  130 // Use updateMany to prevent Prisma errors if goal doesn’t exist for user
+→ 131 await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany({
+        where: {
+          id: 3,
+          userId: 1
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateManyMutationInput. Did you mean `text`? Available args:
+type GoalUpdateManyMutationInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+}
+
+
+[03:04:46.891] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:05:02.467] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:05:02.593] Browser ERROR   Error fetching goals: {}
+[03:06:18.713] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:06:20.065] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:130:164
+
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  129 // Update the goal
+→ 130 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:06:20.170] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:08:28.969] Server  LOG      ✓ Compiled in 8ms
+[03:11:20.605] Server  LOG      ✓ Compiled in 14ms
+[03:12:07.982] Server  LOG      ✓ Compiled in 6ms
+[03:12:44.127] Browser ERROR   DELETE failed: <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/chunks/app_globals_71f961d1.css" data-precedence="next_static/chunks/app_globals_71f961d1.css"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_bae88007._.js"/><script src="/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_9212ccad._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_1dd7fb59.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_a0e4c7b4._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_client_aaee43fe._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_7a8122d0._.js" async=""></script><script src="/_next/static/chunks/node_modules_%40swc_helpers_cjs_d80fb378._.js" async=""></script><script src="/_next/static/chunks/_a0ff3932._.js" async=""></script><script src="/_next/static/chunks/turbopack-_45210fd5._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_447ccf49._.js" async=""></script><script src="/_next/static/chunks/_d4dd8139._.js" async=""></script><script src="/_next/static/chunks/app_layout_jsx_78cdd4a3._.js" async=""></script><meta name="robots" content="noindex"/><title>404: This page could not be found.</title><script src="/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><nav class="navbar flex justify-between items-center p-4 bg-green-100 shadow-md"><div class="logo text-xl font-bold text-green-700 flex items-center gap-2"><span>🌿</span> EcoTrack</div><div class="flex items-center gap-4"><a href="/">Home</a><a href="/goals">Goals</a><a href="/actions">Actions</a><a href="/recommendations">Recommendations</a><a class="text-green-700 font-medium" href="/profile">Login/Register</a></div></nav><div class="page-container"><div style="font-family:system-ui,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;height:100vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center"><div><style>body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}</style><h1 class="next-error-h1" style="display:inline-block;margin:0 20px 0 0;padding:0 23px 0 0;font-size:24px;font-weight:500;vertical-align:top;line-height:49px">404</h1><div style="display:inline-block"><h2 style="font-size:14px;font-weight:400;line-height:49px;margin:0">This page could not be found.</h2></div></div></div><!--$--><!--/$--></div><script id="_R_">self.__next_r="dKtBWkf2RGqqBmJcw2ikT"</script><script src="/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_bae88007._.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"5:I[\"[project]/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"SegmentViewNode\"]\n7:\"$Sreact.fragment\"\n19:I[\"[project]/context/AuthContext.jsx [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"AuthProvider\"]\n1b:I[\"[project]/components/Header.jsx [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n1e:I[\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n20:I[\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n41:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"OutletBoundary\"]\n43:\"$Sreact.suspense\"\n4d:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"ViewportBoundary\"]\n53:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"MetadataBoundary\"]\n57:I[\"[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n:HL[\"/_next/static/chunks/app_globals_71f961d1.css\",\"style\"]\n:N1765526781018.8984\n3:\"$EObject.defineProperty(()=\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)},\\\"name\\\",{value:\\\"\\\"})\"\n2:{\"name\":\"Preloads\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"preloadCallbacks\":[\"$3\"]}}\n4:[]\n6:[]\n8:[[\"Array.map\",\"\",0,0,0,0,false]]\n9:[[\"Array.map\",\"\",0,0,0,0,false]]\na:[[\"Array.map\",\"\",0,0,0,0,false]]\nb:[[\"Array.map\",\"\",0,0,0,0,false]]\ne:I[\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n11:I[\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n12:{}\n13:[[\"Function.all\",\"\",0,0,0,0,true]]\n10:{\"children\":[\"$\",\"$L11\",null,\"$12\",null,\"$13\",1]}\n14:[[\"Function.all\",\"\",0,0,0,0,true]]\nf:{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$7\",null,\"$10\",null,\"$14\",0],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$Y\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":\"$Y\"}\n15:[[\"Function.all\",\"\",0,0,0,0,true]]\nd:{\"name\":\"RootLayout\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"children\":[\"$\",\"$Le\",null,\"$f\",null,\"$15\",1],\"params\":\"$Y\"}}\n16:[[\"RootLayout\",\"/Users/aliciamartinez/"])</script><script>self.__next_f.push([1,"Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",99,263,98,1,false]]\n17:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",101,270,98,1,false]]\n18:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",102,274,98,1,false]]\n1a:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",104,272,98,1,false]]\n1c:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",109,272,98,1,false]]\n1d:[[\"Function.all\",\"\",0,0,0,0,true]]\n1f:[[\"Function.all\",\"\",0,0,0,0,true]]\n21:[]\n23:{\"name\":\"NotFound\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n24:{\"name\":\"HTTPAccessErrorFallback\",\"key\":null,\"env\":\"Server\",\"owner\":\"$23\",\"stack\":[],\"props\":{\"status\":404,\"message\":\"This page could not be found.\"}}\n25:[]\n26:[]\n27:[]\n28:[]\n29:[]\n2a:[]\n2b:[]\n2c:[[\"Function.all\",\"\",0,0,0,0,true]]\n2d:[[\"Function.all\",\"\",0,0,0,0,true]]\n2e:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n2f:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n30:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n31:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n33:{\"name\":\"NotFound\",\"key\":null,\"env\":\"Server\",\"stack\":[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]],\"props\":{\"params\":\"$@34\",\"searchParams\":\"$@35\"}}\n36:{\"name\":\"HTTPAccessErrorFallback\",\"key\":null,\"env\":\"Server\",\"owner\":\"$33\",\"stack\":[],\"props\":{\"status\":404,\"message\":\"This page could not be found.\"}}\n37:[]\n38:[]\n39:[]\n3a:[]\n3b:[]\n3c:[]\n3d:[]\n3f:{\"name\":\"Next.MetadataOutlet\",\"key\":null,\"env\":\"Server\",\"stack\":[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]],\"props\":{}}\n40:[]\n42:[]\n45:[]\n"])</script><script>self.__next_f.push([1,"48:\"$EObject.defineProperty(function(type,config,children){for(var propName,i=2;i\u003carguments.length;i++)validateChildKeys(arguments[i]);i={};var key=null;if(null!=config)for(propName in didWarnAboutOldJSXRuntime||!(\\\"__self\\\"in config)||\\\"key\\\"in config||(didWarnAboutOldJSXRuntime=!0,console.warn(\\\"Your app (or one of its dependencies) is using an outdated JSX transform. Update to the modern JSX transform for faster performance: https://react.dev/link/new-jsx-transform\\\")),hasValidKey(config)\u0026\u0026(checkKeyStringCoercion(config.key),key=\\\"\\\"+config.key),config)hasOwnProperty.call(config,propName)\u0026\u0026\\\"key\\\"!==propName\u0026\u0026\\\"__self\\\"!==propName\u0026\u0026\\\"__source\\\"!==propName\u0026\u0026(i[propName]=config[propName]);var childrenLength=arguments.length-2;if(1===childrenLength)i.children=children;else if(1\u003cchildrenLength){for(var childArray=Array(childrenLength),_i=0;_i\u003cchildrenLength;_i++)childArray[_i]=arguments[_i+2];Object.freeze\u0026\u0026Object.freeze(childArray),i.children=childArray}if(type\u0026\u0026type.defaultProps)for(propName in childrenLength=type.defaultProps)void 0===i[propName]\u0026\u0026(i[propName]=childrenLength[propName]);return key\u0026\u0026function(props,displayName){function warnAboutAccessingKey(){specialPropKeyWarningShown||(specialPropKeyWarningShown=!0,console.error(\\\"%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)\\\",displayName))}warnAboutAccessingKey.isReactWarning=!0,Object.defineProperty(props,\\\"key\\\",{get:warnAboutAccessingKey,configurable:!0})}(i,\\\"function\\\"==typeof type?type.displayName||type.name||\\\"Unknown\\\":type),(propName=1e4\u003eReactSharedInternals.recentlyCreatedOwnerStacks++)?(childArray=Error.stackTraceLimit,Error.stackTraceLimit=10,childrenLength=Error(\\\"react-stack-top-frame\\\"),Error.stackTraceLimit=childArray):childrenLength=unknownOwnerDebugStack,ReactElement(type,key,i,getOwner(),childrenLength,propName?createTask(getTaskName(type)):unknownOwnerDebugTask)},\\\"name\\\",{value:\\\"\\\"})\"\n"])</script><script>self.__next_f.push([1,"47:{\"name\":\"NonIndex\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"createElement\":\"$48\",\"pagePath\":\"/_not-found\",\"statusCode\":404,\"isPossibleServerAction\":false}}\n49:[]\n4b:{\"name\":\"Next.Viewport\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n4c:[]\n50:{\"name\":\"Next.Metadata\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n51:[]\n52:[]\n54:[]\n34:{}\n35:\n58:[]\n59:[]\n1:D{\"time\":0.2603750005364418}\n1:D\"$2\"\n1:D{\"time\":0.3007910009473562}\n1:null\nc:D{\"time\":1.1398330014199018}\nc:D\"$d\"\nc:D{\"time\":1.7291250005364418}\n22:D{\"time\":2.0791250001639128}\n22:D\"$23\"\n22:D{\"time\":2.1622500009834766}\n22:D\"$24\"\n22:D{\"time\":2.336125001311302}\n22:[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"},\"$24\",\"$25\",1],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}},\"$24\",\"$28\",1],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404},\"$24\",\"$29\",1],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"},\"$24\",\"$2b\",1]},\"$24\",\"$2a\",1]]},\"$24\",\"$27\",1]},\"$24\",\"$26\",1]]\nc:[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"children\":[\"$\",\"$L19\",null,{\"children\":[[\"$\",\"$L1b\",null,{},\"$d\",\"$1a\",1],[\"$\",\"div\",null,{\"className\":\"page-container\",\"children\":[\"$\",\"$L1e\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L20\",null,{},null,\"$1f\",1],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"$L5\",\"c-not-found\",{\"type\":\"not-found\",\"pagePath\":\"__next_builtin__not-found.js\",\"children\":[\"$22\",[]]},null,\"$21\",0],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":[[\"$\",\"$L5\",null,{\"type\":\"boundary:not-found\",\"pagePath\":\"__next_builtin__not-found.js@boundary\"},null,\"$2c\",1],\"$undefined\",\"$undefined\",\"$undefined\"]},null,\"$1d\",1]},\"$d\",\"$1c\",1]]},\"$d\",\"$18\",1]},\"$d\",\"$17\",1]},\"$d\",\"$16\",1]\n32:D{\"time\":3.4815410003066063}\n32:D\"$33\"\n32:D{\"time\":3.551875000819564}\n32:D\"$36\"\n32:D{\"time\":3.691083000972867}\n32:[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"},\"$36\",\"$37\",1],[\"$\",\"div\",null,{\"style\":\"$22:1:props:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}},\"$36\",\"$3a\",1],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$22:1:props:children:props:children:1:props:style\",\"children\":404},\"$36\",\"$3b\",1],[\"$\",\"div\",null,{\"style\":\"$22:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$22:1:props:children:props:children:2:props:children:props:style\",\"children\":\"This page could not be found.\"},\"$36\",\"$3d\",1]},\"$36\",\"$3c\",1]]},\"$36\",\"$39\",1]},\"$36\",\"$38\",1]]\n3e:D{\"time\":4.009291000664234}\n3e:D\"$3f\"\n3e:D{\"time\":5.453750001266599}\n3e:[\"$\",\"$L41\",null,{\"children\":[\"$\",\"$43\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@44\"},\"$3f\",\"$42\",1]},\"$3f\",\"$40\",1]\n46:D{\"time\":7.8056660015136}\n46:D\"$47\"\n46:D{\"time\":7.870833000168204}\n46:[\"$\",\"meta\",null,{\"name\":\"robots\",\"content\":\"noindex\"},\"$47\",\"$49\",1]\n4a:D{\"time\":7.937916001304984}\n4a:D\"$4b\"\n4a:D{\"time\":8.035125000402331}\n4a"])</script><script>self.__next_f.push([1,":[\"$\",\"$L4d\",null,{\"children\":\"$@4e\"},\"$4b\",\"$4c\",1]\n4f:D{\"time\":8.228833001106977}\n4f:D\"$50\"\n4f:D{\"time\":8.333083000034094}\n4f:[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L53\",null,{\"children\":[\"$\",\"$43\",null,{\"name\":\"Next.Metadata\",\"children\":\"$@55\"},\"$50\",\"$54\",1]},\"$50\",\"$52\",1]},\"$50\",\"$51\",1]\n56:[]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":\"$1\",\"b\":\"development\",\"c\":[\"\",\"api\",\"goals\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"/_not-found\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$L5\",\"layout\",{\"type\":\"layout\",\"pagePath\":\"layout.jsx\",\"children\":[\"$\",\"$7\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/app_globals_71f961d1.css\",\"precedence\":\"next_static/chunks/app_globals_71f961d1.css\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"},null,\"$8\",0],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$9\",0],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/_d4dd8139._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$a\",0],[\"$\",\"script\",\"script-2\",{\"src\":\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$b\",0]],\"$c\"]},null,\"$6\",1]},null,\"$4\",0],{\"children\":[[\"$\",\"$7\",\"c\",{\"children\":[null,[\"$\",\"$L1e\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L20\",null,{},null,\"$2f\",1],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":[\"$undefined\",\"$undefined\",\"$undefined\",\"$undefined\"]},null,\"$2e\",1]]},null,\"$2d\",0],{\"children\":[[\"$\",\"$7\",\"c\",{\"children\":[[\"$\",\"$L5\",\"c-page\",{\"type\":\"page\",\"pagePath\":\"__next_builtin__not-found.js\",\"children\":\"$32\"},null,\"$31\",1],null,\"$3e\"]},null,\"$30\",0],{},null,false,false]},null,false,false]},null,false,false],[\"$\",\"$7\",\"h\",{\"children\":[\"$46\",\"$4a\",\"$4f\",null]},null,\"$45\",0],false]],\"m\":\"$W56\",\"G\":[\"$57\",\"$undefined\"],\"S\":false}\n"])</script><script>self.__next_f.push([1,"4e:D{\"time\":9.992583001032472}\n4e:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"},\"$3f\",\"$58\",0],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},\"$3f\",\"$59\",0]]\n55:D{\"time\":10.390166001394391}\n55:[]\n44:D{\"time\":10.395750001072884}\n44:null\n"])</script></body></html>
+[03:13:47.071] Server  LOG      ✓ Compiled in 3ms
+[03:13:51.320] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:13:53.956] Browser ERROR   DELETE failed: <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/chunks/app_globals_71f961d1.css" data-precedence="next_static/chunks/app_globals_71f961d1.css"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_bae88007._.js"/><script src="/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_9212ccad._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_1dd7fb59.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_a0e4c7b4._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_client_aaee43fe._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_7a8122d0._.js" async=""></script><script src="/_next/static/chunks/node_modules_%40swc_helpers_cjs_d80fb378._.js" async=""></script><script src="/_next/static/chunks/_a0ff3932._.js" async=""></script><script src="/_next/static/chunks/turbopack-_45210fd5._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_447ccf49._.js" async=""></script><script src="/_next/static/chunks/_d4dd8139._.js" async=""></script><script src="/_next/static/chunks/app_layout_jsx_78cdd4a3._.js" async=""></script><meta name="robots" content="noindex"/><title>404: This page could not be found.</title><script src="/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><nav class="navbar flex justify-between items-center p-4 bg-green-100 shadow-md"><div class="logo text-xl font-bold text-green-700 flex items-center gap-2"><span>🌿</span> EcoTrack</div><div class="flex items-center gap-4"><a href="/">Home</a><a href="/goals">Goals</a><a href="/actions">Actions</a><a href="/recommendations">Recommendations</a><a class="text-green-700 font-medium" href="/profile">Login/Register</a></div></nav><div class="page-container"><div style="font-family:system-ui,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;height:100vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center"><div><style>body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}</style><h1 class="next-error-h1" style="display:inline-block;margin:0 20px 0 0;padding:0 23px 0 0;font-size:24px;font-weight:500;vertical-align:top;line-height:49px">404</h1><div style="display:inline-block"><h2 style="font-size:14px;font-weight:400;line-height:49px;margin:0">This page could not be found.</h2></div></div></div><!--$--><!--/$--></div><script id="_R_">self.__next_r="4JEIk0_35J_ykwyXGmCoE"</script><script src="/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_bae88007._.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"5:I[\"[project]/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"SegmentViewNode\"]\n7:\"$Sreact.fragment\"\n19:I[\"[project]/context/AuthContext.jsx [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"AuthProvider\"]\n1b:I[\"[project]/components/Header.jsx [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n1e:I[\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n20:I[\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n41:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"OutletBoundary\"]\n43:\"$Sreact.suspense\"\n4d:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"ViewportBoundary\"]\n53:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"MetadataBoundary\"]\n57:I[\"[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n:HL[\"/_next/static/chunks/app_globals_71f961d1.css\",\"style\"]\n:N1765526850849.272\n3:\"$EObject.defineProperty(()=\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)},\\\"name\\\",{value:\\\"\\\"})\"\n2:{\"name\":\"Preloads\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"preloadCallbacks\":[\"$3\"]}}\n4:[]\n6:[]\n8:[[\"Array.map\",\"\",0,0,0,0,false]]\n9:[[\"Array.map\",\"\",0,0,0,0,false]]\na:[[\"Array.map\",\"\",0,0,0,0,false]]\nb:[[\"Array.map\",\"\",0,0,0,0,false]]\ne:I[\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n11:I[\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n12:{}\n13:[[\"Function.all\",\"\",0,0,0,0,true]]\n10:{\"children\":[\"$\",\"$L11\",null,\"$12\",null,\"$13\",1]}\n14:[[\"Function.all\",\"\",0,0,0,0,true]]\nf:{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$7\",null,\"$10\",null,\"$14\",0],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$Y\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":\"$Y\"}\n15:[[\"Function.all\",\"\",0,0,0,0,true]]\nd:{\"name\":\"RootLayout\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"children\":[\"$\",\"$Le\",null,\"$f\",null,\"$15\",1],\"params\":\"$Y\"}}\n16:[[\"RootLayout\",\"/Users/aliciamartinez/D"])</script><script>self.__next_f.push([1,"ownloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",99,263,98,1,false]]\n17:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",101,270,98,1,false]]\n18:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",102,274,98,1,false]]\n1a:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",104,272,98,1,false]]\n1c:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",109,272,98,1,false]]\n1d:[[\"Function.all\",\"\",0,0,0,0,true]]\n1f:[[\"Function.all\",\"\",0,0,0,0,true]]\n21:[]\n23:{\"name\":\"NotFound\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n24:{\"name\":\"HTTPAccessErrorFallback\",\"key\":null,\"env\":\"Server\",\"owner\":\"$23\",\"stack\":[],\"props\":{\"status\":404,\"message\":\"This page could not be found.\"}}\n25:[]\n26:[]\n27:[]\n28:[]\n29:[]\n2a:[]\n2b:[]\n2c:[[\"Function.all\",\"\",0,0,0,0,true]]\n2d:[[\"Function.all\",\"\",0,0,0,0,true]]\n2e:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n2f:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n30:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n31:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n33:{\"name\":\"NotFound\",\"key\":null,\"env\":\"Server\",\"stack\":[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]],\"props\":{\"params\":\"$@34\",\"searchParams\":\"$@35\"}}\n36:{\"name\":\"HTTPAccessErrorFallback\",\"key\":null,\"env\":\"Server\",\"owner\":\"$33\",\"stack\":[],\"props\":{\"status\":404,\"message\":\"This page could not be found.\"}}\n37:[]\n38:[]\n39:[]\n3a:[]\n3b:[]\n3c:[]\n3d:[]\n3f:{\"name\":\"Next.MetadataOutlet\",\"key\":null,\"env\":\"Server\",\"stack\":[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]],\"props\":{}}\n40:[]\n42:[]\n45:[]\n"])</script><script>self.__next_f.push([1,"48:\"$EObject.defineProperty(function(type,config,children){for(var propName,i=2;i\u003carguments.length;i++)validateChildKeys(arguments[i]);i={};var key=null;if(null!=config)for(propName in didWarnAboutOldJSXRuntime||!(\\\"__self\\\"in config)||\\\"key\\\"in config||(didWarnAboutOldJSXRuntime=!0,console.warn(\\\"Your app (or one of its dependencies) is using an outdated JSX transform. Update to the modern JSX transform for faster performance: https://react.dev/link/new-jsx-transform\\\")),hasValidKey(config)\u0026\u0026(checkKeyStringCoercion(config.key),key=\\\"\\\"+config.key),config)hasOwnProperty.call(config,propName)\u0026\u0026\\\"key\\\"!==propName\u0026\u0026\\\"__self\\\"!==propName\u0026\u0026\\\"__source\\\"!==propName\u0026\u0026(i[propName]=config[propName]);var childrenLength=arguments.length-2;if(1===childrenLength)i.children=children;else if(1\u003cchildrenLength){for(var childArray=Array(childrenLength),_i=0;_i\u003cchildrenLength;_i++)childArray[_i]=arguments[_i+2];Object.freeze\u0026\u0026Object.freeze(childArray),i.children=childArray}if(type\u0026\u0026type.defaultProps)for(propName in childrenLength=type.defaultProps)void 0===i[propName]\u0026\u0026(i[propName]=childrenLength[propName]);return key\u0026\u0026function(props,displayName){function warnAboutAccessingKey(){specialPropKeyWarningShown||(specialPropKeyWarningShown=!0,console.error(\\\"%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)\\\",displayName))}warnAboutAccessingKey.isReactWarning=!0,Object.defineProperty(props,\\\"key\\\",{get:warnAboutAccessingKey,configurable:!0})}(i,\\\"function\\\"==typeof type?type.displayName||type.name||\\\"Unknown\\\":type),(propName=1e4\u003eReactSharedInternals.recentlyCreatedOwnerStacks++)?(childArray=Error.stackTraceLimit,Error.stackTraceLimit=10,childrenLength=Error(\\\"react-stack-top-frame\\\"),Error.stackTraceLimit=childArray):childrenLength=unknownOwnerDebugStack,ReactElement(type,key,i,getOwner(),childrenLength,propName?createTask(getTaskName(type)):unknownOwnerDebugTask)},\\\"name\\\",{value:\\\"\\\"})\"\n"])</script><script>self.__next_f.push([1,"47:{\"name\":\"NonIndex\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"createElement\":\"$48\",\"pagePath\":\"/_not-found\",\"statusCode\":404,\"isPossibleServerAction\":false}}\n49:[]\n4b:{\"name\":\"Next.Viewport\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n4c:[]\n50:{\"name\":\"Next.Metadata\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n51:[]\n52:[]\n54:[]\n34:{}\n35:\n58:[]\n59:[]\n1:D{\"time\":0.2988749984651804}\n1:D\"$2\"\n1:D{\"time\":0.335207998752594}\n1:null\nc:D{\"time\":1.2188329994678497}\nc:D\"$d\"\nc:D{\"time\":1.4121249988675117}\n22:D{\"time\":1.720499999821186}\n22:D\"$23\"\n22:D{\"time\":1.7908749990165234}\n22:D\"$24\"\n22:D{\"time\":1.962874999269843}\n22:[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"},\"$24\",\"$25\",1],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}},\"$24\",\"$28\",1],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404},\"$24\",\"$29\",1],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"},\"$24\",\"$2b\",1]},\"$24\",\"$2a\",1]]},\"$24\",\"$27\",1]},\"$24\",\"$26\",1]]\nc:[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"children\":[\"$\",\"$L19\",null,{\"children\":[[\"$\",\"$L1b\",null,{},\"$d\",\"$1a\",1],[\"$\",\"div\",null,{\"className\":\"page-container\",\"children\":[\"$\",\"$L1e\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L20\",null,{},null,\"$1f\",1],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"$L5\",\"c-not-found\",{\"type\":\"not-found\",\"pagePath\":\"__next_builtin__not-found.js\",\"children\":[\"$22\",[]]},null,\"$21\",0],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":[[\"$\",\"$L5\",null,{\"type\":\"boundary:not-found\",\"pagePath\":\"__next_builtin__not-found.js@boundary\"},null,\"$2c\",1],\"$undefined\",\"$undefined\",\"$undefined\"]},null,\"$1d\",1]},\"$d\",\"$1c\",1]]},\"$d\",\"$18\",1]},\"$d\",\"$17\",1]},\"$d\",\"$16\",1]\n32:D{\"time\":2.9930419996380806}\n32:D\"$33\"\n32:D{\"time\":3.0944999996572733}\n32:D\"$36\"\n32:D{\"time\":3.2525420002639294}\n32:[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"},\"$36\",\"$37\",1],[\"$\",\"div\",null,{\"style\":\"$22:1:props:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}},\"$36\",\"$3a\",1],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$22:1:props:children:props:children:1:props:style\",\"children\":404},\"$36\",\"$3b\",1],[\"$\",\"div\",null,{\"style\":\"$22:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$22:1:props:children:props:children:2:props:children:props:style\",\"children\":\"This page could not be found.\"},\"$36\",\"$3d\",1]},\"$36\",\"$3c\",1]]},\"$36\",\"$39\",1]},\"$36\",\"$38\",1]]\n3e:D{\"time\":3.4792499989271164}\n3e:D\"$3f\"\n3e:D{\"time\":5.138416999951005}\n3e:[\"$\",\"$L41\",null,{\"children\":[\"$\",\"$43\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@44\"},\"$3f\",\"$42\",1]},\"$3f\",\"$40\",1]\n46:D{\"time\":5.493707999587059}\n46:D\"$47\"\n46:D{\"time\":5.5452919993549585}\n46:[\"$\",\"meta\",null,{\"name\":\"robots\",\"content\":\"noindex\"},\"$47\",\"$49\",1]\n4a:D{\"time\":5.614957999438047}\n4a:D\"$4b\"\n4a:D{\"time\":5.703457999974489"])</script><script>self.__next_f.push([1,"}\n4a:[\"$\",\"$L4d\",null,{\"children\":\"$@4e\"},\"$4b\",\"$4c\",1]\n4f:D{\"time\":5.91079199872911}\n4f:D\"$50\"\n4f:D{\"time\":6.029957998543978}\n4f:[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L53\",null,{\"children\":[\"$\",\"$43\",null,{\"name\":\"Next.Metadata\",\"children\":\"$@55\"},\"$50\",\"$54\",1]},\"$50\",\"$52\",1]},\"$50\",\"$51\",1]\n56:[]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":\"$1\",\"b\":\"development\",\"c\":[\"\",\"api\",\"goals\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"/_not-found\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$L5\",\"layout\",{\"type\":\"layout\",\"pagePath\":\"layout.jsx\",\"children\":[\"$\",\"$7\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/app_globals_71f961d1.css\",\"precedence\":\"next_static/chunks/app_globals_71f961d1.css\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"},null,\"$8\",0],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$9\",0],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/_d4dd8139._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$a\",0],[\"$\",\"script\",\"script-2\",{\"src\":\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$b\",0]],\"$c\"]},null,\"$6\",1]},null,\"$4\",0],{\"children\":[[\"$\",\"$7\",\"c\",{\"children\":[null,[\"$\",\"$L1e\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L20\",null,{},null,\"$2f\",1],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":[\"$undefined\",\"$undefined\",\"$undefined\",\"$undefined\"]},null,\"$2e\",1]]},null,\"$2d\",0],{\"children\":[[\"$\",\"$7\",\"c\",{\"children\":[[\"$\",\"$L5\",\"c-page\",{\"type\":\"page\",\"pagePath\":\"__next_builtin__not-found.js\",\"children\":\"$32\"},null,\"$31\",1],null,\"$3e\"]},null,\"$30\",0],{},null,false,false]},null,false,false]},null,false,false],[\"$\",\"$7\",\"h\",{\"children\":[\"$46\",\"$4a\",\"$4f\",null]},null,\"$45\",0],false]],\"m\":\"$W56\",\"G\":[\"$57\",\"$undefined\"],\"S\":false}\n"])</script><script>self.__next_f.push([1,"4e:D{\"time\":9.21845799870789}\n4e:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"},\"$3f\",\"$58\",0],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},\"$3f\",\"$59\",0]]\n55:D{\"time\":9.610249999910593}\n55:[]\n44:D{\"time\":9.615457998588681}\n44:null\n"])</script></body></html>
+[03:16:57.175] Server  LOG      ✓ Compiled in 8ms
+[03:17:08.373] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:17:49.536] Server  LOG      ✓ Compiled in 10ms
+[03:17:52.755] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:21:15.360] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.361] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.361] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.364] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.365] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.366] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.367] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.368] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.369] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.371] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.372] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.373] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:15.391] Server  LOG      ✓ Compiled in 23ms
+[03:21:16.469] Browser ERROR   ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[03:21:50.447] Server  ERROR    ⨯ ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:50.563] Browser ERROR   ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[03:21:50.902] Browser ERROR   ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[03:21:50.998] Browser ERROR   uncaughtError: Error: ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:21:51.157] Browser ERROR   ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[03:21:51.157] Browser ERROR   ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[03:22:00.975] Browser ERROR   ./app/actions/page.jsx:6:1
+Module not found: Can't resolve '@/context/GoalsContext'
+  4 | import Link from "next/link";
+  5 | import { useAuth } from "@/context/AuthContext";
+> 6 | import { useGoals } from "@/context/GoalsContext";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function ActionsPage() {
+  9 |   const { user } = useAuth();
+
+Import map: aliased to relative './context/GoalsContext' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[03:22:03.910] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:22:19.476] Server  LOG      ✓ Compiled in 10ms
+[03:22:23.241] Server  LOG      ✓ Compiled in 7ms
+[03:22:31.303] Server  LOG      ✓ Compiled in 7ms
+[03:22:37.098] Server  LOG      ✓ Compiled in 6ms
+[03:22:38.677] Server  LOG      ✓ Compiled in 16ms
+[03:22:51.820] Server  LOG      ✓ Compiled in 18ms
+[03:23:02.615] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:24:07.859] Server  LOG      ✓ Compiled in 5ms
+[03:25:30.157] Server  LOG      ✓ Compiled in 9ms
+[03:25:32.859] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:25:35.323] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:130:164
+
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  129 // Update the goal
+→ 130 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:25:35.430] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:27:34.273] Server  LOG      ✓ Compiled in 4ms
+[03:27:39.437] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:28:39.882] Server  LOG      ✓ Compiled in 5ms
+[03:28:44.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:29:46.970] Server  LOG      ✓ Compiled in 8ms
+[03:29:50.137] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:30:46.018] Server  LOG      ✓ Compiled in 10ms
+[03:30:48.867] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:31:30.309] Server  LOG      ✓ Compiled in 6ms
+[03:31:34.165] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:130:164
+
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  129 // Update the goal
+→ 130 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:31:35.110] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:130:164
+
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  129 // Update the goal
+→ 130 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:31:36.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:33:12.764] Server  LOG      ✓ Compiled in 5ms
+[03:33:16.961] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:33:18.639] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:130:164
+
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  129 // Update the goal
+→ 130 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:33:19.441] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:130:164
+
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  129 // Update the goal
+→ 130 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:33:57.226] Server  LOG      ✓ Compiled in 6ms
+[03:34:01.276] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:34:02.374] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:130:164
+
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + 1, 10);
+  129 // Update the goal
+→ 130 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:34:02.478] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:34:55.487] Server  LOG      ✓ Compiled in 9ms
+[03:34:56.469] Browser ERROR   ./app/actions/page.jsx:133:1
+Parsing ecmascript source code failed
+  131 |                 }}
+  132 |               />
+> 133 |
+      | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+[03:35:03.325] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:35:03.458] Browser ERROR   Error fetching goals: {}
+[03:35:42.380] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:35:44.333] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:129:164
+
+  126     });
+  127 }
+  128 const newProgress = Math.min((goal.progress || 0) + inc, 10);
+→ 129 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:35:44.437] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:37:09.496] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:37:10.947] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:116:160
+
+  113     });
+  114 }
+  115 // Use updateMany to safely increment progress
+→ 116 const updated = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany({
+        where: {
+          id: 3,
+          userId: 1
+        },
+        data: {
+          progress: {
+          ~~~~~~~~
+            increment: 1
+          }
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateManyMutationInput. Did you mean `text`? Available args:
+type GoalUpdateManyMutationInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+}
+
+
+[03:37:11.050] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:37:48.477] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:37:49.790] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:116:160
+
+  113     });
+  114 }
+  115 // Use updateMany to safely increment progress
+→ 116 const updated = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany({
+        where: {
+          id: 3,
+          userId: 1
+        },
+        data: {
+          progress: {
+          ~~~~~~~~
+            increment: 1
+          }
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateManyMutationInput. Did you mean `text`? Available args:
+type GoalUpdateManyMutationInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+}
+
+
+[03:37:49.896] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:38:23.238] Server  LOG      ✓ Compiled in 7ms
+[03:38:27.295] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:38:28.585] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:116:160
+
+  113     });
+  114 }
+  115 // Use updateMany to safely increment progress
+→ 116 const updated = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.updateMany({
+        where: {
+          id: 3,
+          userId: 1
+        },
+        data: {
+          progress: {
+          ~~~~~~~~
+            increment: 1
+          }
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateManyMutationInput. Did you mean `text`? Available args:
+type GoalUpdateManyMutationInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+}
+
+
+[03:38:28.690] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:39:05.842] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:39:07.224] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:164
+
+  128 }
+  129 // Increment progress safely, max 10
+  130 const newProgress = Math.min((goal.progress || 0) + inc, 10);
+→ 131 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:39:07.329] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:39:49.311] Server  LOG      ✓ Compiled in 19ms
+[03:39:49.468] Browser ERROR   Received NaN for the `%s` attribute. If this is expected, cast the value to a string. max
+[03:39:54.020] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:39:54.201] Browser ERROR   Received NaN for the `%s` attribute. If this is expected, cast the value to a string. max
+[03:40:43.649] Server  LOG      ✓ Compiled in 35ms
+[03:40:44.470] Browser ERROR   ./app/actions/page.jsx:81:4
+Parsing ecmascript source code failed
+  79 |       </div>
+  80 |     );
+> 81 |   }
+     |    ^
+  82 |
+  83 |   // Logged in UI
+  84 |
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/actions/page.jsx [Client Component Browser]
+    ./app/actions/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/actions/page.jsx [Client Component SSR]
+    ./app/actions/page.jsx [Server Component]
+[03:40:48.639] Server  LOG      ✓ Compiled in 6ms
+[03:40:56.181] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:164
+
+  128 }
+  129 // Increment progress safely, max 10
+  130 const newProgress = Math.min((goal.progress || 0) + inc, 10);
+→ 131 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:40:56.285] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:41:29.920] Server  LOG      ✓ Compiled in 4ms
+[03:41:33.941] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:41:35.091] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:164
+
+  128 }
+  129 // Increment progress safely, max 10
+  130 const newProgress = Math.min((goal.progress || 0) + inc, 10);
+→ 131 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:41:35.195] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:41:36.316] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:164
+
+  128 }
+  129 // Increment progress safely, max 10
+  130 const newProgress = Math.min((goal.progress || 0) + inc, 10);
+→ 131 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:41:36.419] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:41:36.576] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:164
+
+  128 }
+  129 // Increment progress safely, max 10
+  130 const newProgress = Math.min((goal.progress || 0) + inc, 10);
+→ 131 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:41:36.679] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:41:36.817] Server  ERROR   POST /api/actions error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__0ada7284._.js:131:164
+
+  128 }
+  129 // Increment progress safely, max 10
+  130 const newProgress = Math.min((goal.progress || 0) + inc, 10);
+→ 131 const updatedGoal = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].goal.update({
+        where: {
+          id: 3
+        },
+        data: {
+          progress: 1
+          ~~~~~~~~
+        }
+      })
+
+Unknown arg `progress` in data.progress for type GoalUpdateInput. Did you mean `text`? Available args:
+type GoalUpdateInput {
+  text?: String | StringFieldUpdateOperationsInput
+  createdAt?: DateTime | DateTimeFieldUpdateOperationsInput
+  user?: UserUpdateOneRequiredWithoutGoalsNestedInput
+}
+
+
+[03:41:36.920] Browser ERROR   POST failed: {"error":"Internal Server Error"}
+[03:42:11.651] Server  LOG      ✓ Compiled in 3ms
+[03:42:14.644] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:45:44.241] Server  LOG      ✓ Compiled in 6ms
+[03:46:00.478] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:46:03.746] Browser ERROR   DELETE failed: <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/chunks/app_globals_71f961d1.css" data-precedence="next_static/chunks/app_globals_71f961d1.css"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_bae88007._.js"/><script src="/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_9212ccad._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_1dd7fb59.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_compiled_a0e4c7b4._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_client_aaee43fe._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_7a8122d0._.js" async=""></script><script src="/_next/static/chunks/node_modules_%40swc_helpers_cjs_d80fb378._.js" async=""></script><script src="/_next/static/chunks/_a0ff3932._.js" async=""></script><script src="/_next/static/chunks/turbopack-_45210fd5._.js" async=""></script><script src="/_next/static/chunks/node_modules_next_dist_447ccf49._.js" async=""></script><script src="/_next/static/chunks/_d4dd8139._.js" async=""></script><script src="/_next/static/chunks/app_layout_jsx_78cdd4a3._.js" async=""></script><meta name="robots" content="noindex"/><title>404: This page could not be found.</title><script src="/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><nav class="navbar flex justify-between items-center p-4 bg-green-100 shadow-md"><div class="logo text-xl font-bold text-green-700 flex items-center gap-2"><span>🌿</span> EcoTrack</div><div class="flex items-center gap-4"><a href="/">Home</a><a href="/goals">Goals</a><a href="/actions">Actions</a><a href="/recommendations">Recommendations</a><a class="text-green-700 font-medium" href="/profile">Login/Register</a></div></nav><div class="page-container"><div style="font-family:system-ui,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;height:100vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center"><div><style>body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}</style><h1 class="next-error-h1" style="display:inline-block;margin:0 20px 0 0;padding:0 23px 0 0;font-size:24px;font-weight:500;vertical-align:top;line-height:49px">404</h1><div style="display:inline-block"><h2 style="font-size:14px;font-weight:400;line-height:49px;margin:0">This page could not be found.</h2></div></div></div><!--$--><!--/$--></div><script id="_R_">self.__next_r="QSdj51tp4t1VwVPMDO_0l"</script><script src="/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_bae88007._.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"5:I[\"[project]/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"SegmentViewNode\"]\n7:\"$Sreact.fragment\"\n19:I[\"[project]/context/AuthContext.jsx [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"AuthProvider\"]\n1b:I[\"[project]/components/Header.jsx [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n1e:I[\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n20:I[\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n41:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"OutletBoundary\"]\n43:\"$Sreact.suspense\"\n4d:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"ViewportBoundary\"]\n53:I[\"[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"MetadataBoundary\"]\n57:I[\"[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n:HL[\"/_next/static/chunks/app_globals_71f961d1.css\",\"style\"]\n:N1765528780640.6943\n3:\"$EObject.defineProperty(()=\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)},\\\"name\\\",{value:\\\"\\\"})\"\n2:{\"name\":\"Preloads\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"preloadCallbacks\":[\"$3\"]}}\n4:[]\n6:[]\n8:[[\"Array.map\",\"\",0,0,0,0,false]]\n9:[[\"Array.map\",\"\",0,0,0,0,false]]\na:[[\"Array.map\",\"\",0,0,0,0,false]]\nb:[[\"Array.map\",\"\",0,0,0,0,false]]\ne:I[\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n11:I[\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\",[\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"/_next/static/chunks/_d4dd8139._.js\",\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\"],\"default\"]\n12:{}\n13:[[\"Function.all\",\"\",0,0,0,0,true]]\n10:{\"children\":[\"$\",\"$L11\",null,\"$12\",null,\"$13\",1]}\n14:[[\"Function.all\",\"\",0,0,0,0,true]]\nf:{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$7\",null,\"$10\",null,\"$14\",0],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$Y\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":\"$Y\"}\n15:[[\"Function.all\",\"\",0,0,0,0,true]]\nd:{\"name\":\"RootLayout\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"children\":[\"$\",\"$Le\",null,\"$f\",null,\"$15\",1],\"params\":\"$Y\"}}\n16:[[\"RootLayout\",\"/Users/aliciamartinez/"])</script><script>self.__next_f.push([1,"Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",99,263,98,1,false]]\n17:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",101,270,98,1,false]]\n18:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",102,274,98,1,false]]\n1a:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",104,272,98,1,false]]\n1c:[[\"RootLayout\",\"/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/ssr/_1dd88949._.js\",109,272,98,1,false]]\n1d:[[\"Function.all\",\"\",0,0,0,0,true]]\n1f:[[\"Function.all\",\"\",0,0,0,0,true]]\n21:[]\n23:{\"name\":\"NotFound\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n24:{\"name\":\"HTTPAccessErrorFallback\",\"key\":null,\"env\":\"Server\",\"owner\":\"$23\",\"stack\":[],\"props\":{\"status\":404,\"message\":\"This page could not be found.\"}}\n25:[]\n26:[]\n27:[]\n28:[]\n29:[]\n2a:[]\n2b:[]\n2c:[[\"Function.all\",\"\",0,0,0,0,true]]\n2d:[[\"Function.all\",\"\",0,0,0,0,true]]\n2e:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n2f:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n30:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n31:[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]]\n33:{\"name\":\"NotFound\",\"key\":null,\"env\":\"Server\",\"stack\":[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]],\"props\":{\"params\":\"$@34\",\"searchParams\":\"$@35\"}}\n36:{\"name\":\"HTTPAccessErrorFallback\",\"key\":null,\"env\":\"Server\",\"owner\":\"$33\",\"stack\":[],\"props\":{\"status\":404,\"message\":\"This page could not be found.\"}}\n37:[]\n38:[]\n39:[]\n3a:[]\n3b:[]\n3c:[]\n3d:[]\n3f:{\"name\":\"Next.MetadataOutlet\",\"key\":null,\"env\":\"Server\",\"stack\":[[\"Function.all\",\"\",0,0,0,0,true],[\"Function.all\",\"\",0,0,0,0,true]],\"props\":{}}\n40:[]\n42:[]\n45:[]\n"])</script><script>self.__next_f.push([1,"48:\"$EObject.defineProperty(function(type,config,children){for(var propName,i=2;i\u003carguments.length;i++)validateChildKeys(arguments[i]);i={};var key=null;if(null!=config)for(propName in didWarnAboutOldJSXRuntime||!(\\\"__self\\\"in config)||\\\"key\\\"in config||(didWarnAboutOldJSXRuntime=!0,console.warn(\\\"Your app (or one of its dependencies) is using an outdated JSX transform. Update to the modern JSX transform for faster performance: https://react.dev/link/new-jsx-transform\\\")),hasValidKey(config)\u0026\u0026(checkKeyStringCoercion(config.key),key=\\\"\\\"+config.key),config)hasOwnProperty.call(config,propName)\u0026\u0026\\\"key\\\"!==propName\u0026\u0026\\\"__self\\\"!==propName\u0026\u0026\\\"__source\\\"!==propName\u0026\u0026(i[propName]=config[propName]);var childrenLength=arguments.length-2;if(1===childrenLength)i.children=children;else if(1\u003cchildrenLength){for(var childArray=Array(childrenLength),_i=0;_i\u003cchildrenLength;_i++)childArray[_i]=arguments[_i+2];Object.freeze\u0026\u0026Object.freeze(childArray),i.children=childArray}if(type\u0026\u0026type.defaultProps)for(propName in childrenLength=type.defaultProps)void 0===i[propName]\u0026\u0026(i[propName]=childrenLength[propName]);return key\u0026\u0026function(props,displayName){function warnAboutAccessingKey(){specialPropKeyWarningShown||(specialPropKeyWarningShown=!0,console.error(\\\"%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)\\\",displayName))}warnAboutAccessingKey.isReactWarning=!0,Object.defineProperty(props,\\\"key\\\",{get:warnAboutAccessingKey,configurable:!0})}(i,\\\"function\\\"==typeof type?type.displayName||type.name||\\\"Unknown\\\":type),(propName=1e4\u003eReactSharedInternals.recentlyCreatedOwnerStacks++)?(childArray=Error.stackTraceLimit,Error.stackTraceLimit=10,childrenLength=Error(\\\"react-stack-top-frame\\\"),Error.stackTraceLimit=childArray):childrenLength=unknownOwnerDebugStack,ReactElement(type,key,i,getOwner(),childrenLength,propName?createTask(getTaskName(type)):unknownOwnerDebugTask)},\\\"name\\\",{value:\\\"\\\"})\"\n"])</script><script>self.__next_f.push([1,"47:{\"name\":\"NonIndex\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{\"createElement\":\"$48\",\"pagePath\":\"/_not-found\",\"statusCode\":404,\"isPossibleServerAction\":false}}\n49:[]\n4b:{\"name\":\"Next.Viewport\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n4c:[]\n50:{\"name\":\"Next.Metadata\",\"key\":null,\"env\":\"Server\",\"stack\":[],\"props\":{}}\n51:[]\n52:[]\n54:[]\n34:{}\n35:\n58:[]\n59:[]\n1:D{\"time\":0.6218340005725622}\n1:D\"$2\"\n1:D{\"time\":0.6559590008109808}\n1:null\nc:D{\"time\":1.3098340015858412}\nc:D\"$d\"\nc:D{\"time\":1.7400420010089874}\n22:D{\"time\":2.034417001530528}\n22:D\"$23\"\n22:D{\"time\":2.1153750009834766}\n22:D\"$24\"\n22:D{\"time\":2.2827500011771917}\n22:[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"},\"$24\",\"$25\",1],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}},\"$24\",\"$28\",1],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404},\"$24\",\"$29\",1],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"},\"$24\",\"$2b\",1]},\"$24\",\"$2a\",1]]},\"$24\",\"$27\",1]},\"$24\",\"$26\",1]]\nc:[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"children\":[\"$\",\"$L19\",null,{\"children\":[[\"$\",\"$L1b\",null,{},\"$d\",\"$1a\",1],[\"$\",\"div\",null,{\"className\":\"page-container\",\"children\":[\"$\",\"$L1e\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L20\",null,{},null,\"$1f\",1],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"$L5\",\"c-not-found\",{\"type\":\"not-found\",\"pagePath\":\"__next_builtin__not-found.js\",\"children\":[\"$22\",[]]},null,\"$21\",0],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":[[\"$\",\"$L5\",null,{\"type\":\"boundary:not-found\",\"pagePath\":\"__next_builtin__not-found.js@boundary\"},null,\"$2c\",1],\"$undefined\",\"$undefined\",\"$undefined\"]},null,\"$1d\",1]},\"$d\",\"$1c\",1]]},\"$d\",\"$18\",1]},\"$d\",\"$17\",1]},\"$d\",\"$16\",1]\n32:D{\"time\":3.1860840003937483}\n32:D\"$33\"\n32:D{\"time\":3.23670900054276}\n32:D\"$36\"\n32:D{\"time\":3.409042000770569}\n32:[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"},\"$36\",\"$37\",1],[\"$\",\"div\",null,{\"style\":\"$22:1:props:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}},\"$36\",\"$3a\",1],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$22:1:props:children:props:children:1:props:style\",\"children\":404},\"$36\",\"$3b\",1],[\"$\",\"div\",null,{\"style\":\"$22:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$22:1:props:children:props:children:2:props:children:props:style\",\"children\":\"This page could not be found.\"},\"$36\",\"$3d\",1]},\"$36\",\"$3c\",1]]},\"$36\",\"$39\",1]},\"$36\",\"$38\",1]]\n3e:D{\"time\":3.6177500002086163}\n3e:D\"$3f\"\n3e:D{\"time\":4.9510000012815}\n3e:[\"$\",\"$L41\",null,{\"children\":[\"$\",\"$43\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@44\"},\"$3f\",\"$42\",1]},\"$3f\",\"$40\",1]\n46:D{\"time\":5.295459000393748}\n46:D\"$47\"\n46:D{\"time\":5.342083999887109}\n46:[\"$\",\"meta\",null,{\"name\":\"robots\",\"content\":\"noindex\"},\"$47\",\"$49\",1]\n4a:D{\"time\":5.400917001068592}\n4a:D\"$4b\"\n4a:D{\"time\":5.481000000610948}\n4a"])</script><script>self.__next_f.push([1,":[\"$\",\"$L4d\",null,{\"children\":\"$@4e\"},\"$4b\",\"$4c\",1]\n4f:D{\"time\":5.643500000238419}\n4f:D\"$50\"\n4f:D{\"time\":5.739625001326203}\n4f:[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L53\",null,{\"children\":[\"$\",\"$43\",null,{\"name\":\"Next.Metadata\",\"children\":\"$@55\"},\"$50\",\"$54\",1]},\"$50\",\"$52\",1]},\"$50\",\"$51\",1]\n56:[]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":\"$1\",\"b\":\"development\",\"c\":[\"\",\"api\",\"goals\",\"delete\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"/_not-found\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$L5\",\"layout\",{\"type\":\"layout\",\"pagePath\":\"layout.jsx\",\"children\":[\"$\",\"$7\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/app_globals_71f961d1.css\",\"precedence\":\"next_static/chunks/app_globals_71f961d1.css\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"},null,\"$8\",0],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/node_modules_next_dist_447ccf49._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$9\",0],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/_d4dd8139._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$a\",0],[\"$\",\"script\",\"script-2\",{\"src\":\"/_next/static/chunks/app_layout_jsx_78cdd4a3._.js\",\"async\":true,\"nonce\":\"$undefined\"},null,\"$b\",0]],\"$c\"]},null,\"$6\",1]},null,\"$4\",0],{\"children\":[[\"$\",\"$7\",\"c\",{\"children\":[null,[\"$\",\"$L1e\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L20\",null,{},null,\"$2f\",1],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\",\"segmentViewBoundaries\":[\"$undefined\",\"$undefined\",\"$undefined\",\"$undefined\"]},null,\"$2e\",1]]},null,\"$2d\",0],{\"children\":[[\"$\",\"$7\",\"c\",{\"children\":[[\"$\",\"$L5\",\"c-page\",{\"type\":\"page\",\"pagePath\":\"__next_builtin__not-found.js\",\"children\":\"$32\"},null,\"$31\",1],null,\"$3e\"]},null,\"$30\",0],{},null,false,false]},null,false,false]},null,false,false],[\"$\",\"$7\",\"h\",{\"children\":[\"$46\",\"$4a\",\"$4f\",null]},null,\"$45\",0],false]],\"m\":\"$W56\",\"G\":[\"$57\",\"$undefined\"],\"S\":false}\n"])</script><script>self.__next_f.push([1,"4e:D{\"time\":7.375625001266599}\n4e:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"},\"$3f\",\"$58\",0],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},\"$3f\",\"$59\",0]]\n55:D{\"time\":7.789750000461936}\n55:[]\n44:D{\"time\":7.7944590002298355}\n44:null\n"])</script></body></html>
+[03:47:13.845] Server  ERROR    ⨯ ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:47:14.010] Browser ERROR   DELETE failed: <!DOCTYPE html><html><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><style data-next-hide-fouc="true">body{display:none}</style><noscript data-next-hide-fouc="true"><style>body{display:block}</style></noscript><noscript data-n-css=""></noscript><script src="/_next/static/chunks/node_modules_next_dist_compiled_8ca6b690._.js" defer=""></script><script src="/_next/static/chunks/node_modules_next_dist_shared_lib_82dc2e9d._.js" defer=""></script><script src="/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js" defer=""></script><script src="/_next/static/chunks/node_modules_next_dist_b0a279d5._.js" defer=""></script><script src="/_next/static/chunks/node_modules_next_app_72f3d36f.js" defer=""></script><script src="/_next/static/chunks/%5Bnext%5D_entry_page-loader_ts_742e4b53._.js" defer=""></script><script src="/_next/static/chunks/node_modules_react-dom_4411d9bd._.js" defer=""></script><script src="/_next/static/chunks/node_modules_7f09fef0._.js" defer=""></script><script src="/_next/static/chunks/%5Broot-of-the-server%5D__45f039c3._.js" defer=""></script><script src="/_next/static/chunks/pages__app_2da965e7._.js" defer=""></script><script src="/_next/static/chunks/turbopack-pages__app_5d693f93._.js" defer=""></script><script src="/_next/static/chunks/node_modules_next_dist_shared_lib_cf5b50a6._.js" defer=""></script><script src="/_next/static/chunks/node_modules_next_dist_19fd0646._.js" defer=""></script><script src="/_next/static/chunks/node_modules_next_error_1cfbb379.js" defer=""></script><script src="/_next/static/chunks/%5Bnext%5D_entry_page-loader_ts_43b523b5._.js" defer=""></script><script src="/_next/static/chunks/%5Broot-of-the-server%5D__092393de._.js" defer=""></script><script src="/_next/static/chunks/pages__error_2da965e7._.js" defer=""></script><script src="/_next/static/chunks/turbopack-pages__error_9f8f7792._.js" defer=""></script><script src="/_next/static/development/_ssgManifest.js" defer=""></script><script src="/_next/static/development/_buildManifest.js" defer=""></script><noscript id="__next_css__DO_NOT_USE__"></noscript></head><body><div id="__next"></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"statusCode":500,"hostname":"localhost"}},"page":"/_error","query":{},"buildId":"development","isFallback":false,"err":{"name":"Error","source":"server","message":"./app/api/goals/delete/route.js:1:1\nExport prisma doesn't exist in target module\n\u003e 1 | import { prisma } from \"@/lib/prisma\"; // Adjust this path to where your Prisma client is\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  2 |\n  3 | export async function DELETE(req) {\n  4 |   try {\n\nThe export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).\nDid you mean to import default?\nAll exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.\n\n","stack":"Error: ./app/api/goals/delete/route.js:1:1\nExport \u001b[32mprisma\u001b[39m doesn't exist in target module\n\u001b[0m\u001b[31m\u001b[1m\u003e\u001b[22m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { prisma } \u001b[36mfrom\u001b[39m \u001b[32m\"@/lib/prisma\"\u001b[39m\u001b[33m;\u001b[39m \u001b[90m// Adjust this path to where your Prisma client is\u001b[39m\n \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m \u001b[33mDELETE\u001b[39m(req) {\n \u001b[90m 4 |\u001b[39m   \u001b[36mtry\u001b[39m {\u001b[0m\n\nThe export \u001b[32mprisma\u001b[39m was not found in module \u001b[1m\u001b[31m[project]/lib/prisma.jsx [app-route] (ecmascript)\u001b[39m\u001b[22m.\nDid you mean to import \u001b[32mdefault\u001b[39m?\nAll exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.\n\n\n    at Object.getCompilationErrors (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:996:59)\n    at DevBundlerService.getCompilationError (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/server/lib/dev-bundler-service.js:39:55)\n    at DevServer.getCompilationError (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/server/dev/next-dev-server.js:701:42)\n    at DevServer.findPageComponents (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/server/dev/next-dev-server.js:671:43)\n    at async DevServer.renderErrorToResponseImpl (/Users/aliciamartinez/Downloads/Final/node_modules/next/dist/server/base-server.js:1704:26)"},"gip":true,"scriptLoader":[]}</script></body></html>
+[03:47:14.010] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:48:49.957] Server  LOG      ✓ Compiled in 9ms
+[03:48:50.471] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:49:38.208] Server  LOG      ✓ Compiled in 10ms
+[03:49:38.468] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:49:41.234] Browser ERROR   uncaughtError: Error: ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:49:41.378] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:49:41.378] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:49:57.470] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:49:59.341] Browser ERROR   uncaughtError: Error: ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:49:59.476] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:49:59.476] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:50:01.591] Browser ERROR   uncaughtError: Error: ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:50:01.726] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:50:01.726] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:50:03.492] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:50:04.180] Browser ERROR   uncaughtError: Error: ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:50:04.315] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:50:04.315] Browser ERROR   ./app/api/goals/delete/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Adjust this path to where your Prisma client is
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function DELETE(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:50:29.254] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:50:29.254] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/shared/lib/router/router.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:50:29.254] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:50:29.263] Server  LOG      ✓ Compiled in 0ms
+[03:50:29.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:53:53.095] Server  LOG      ✓ Compiled in 18ms
+[03:53:56.549] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:55:01.561] Server  LOG      ✓ Compiled in 7ms
+[03:55:05.259] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:55:06.779] Browser ERROR   {}
+[03:55:54.479] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:55:56.262] Server  ERROR    ⨯ ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:55:56.436] Browser ERROR   {}
+[03:55:56.436] Browser ERROR   Error fetching goals: {}
+[03:55:56.436] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:56:28.314] Browser ERROR   uncaughtError: Error: ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:56:28.451] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:56:28.451] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:56:58.081] Browser ERROR   uncaughtError: Error: ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:56:58.216] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:56:58.216] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:57:46.937] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:57:47.367] Browser ERROR   uncaughtError: Error: ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:57:47.505] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:57:47.505] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:58:20.901] Browser ERROR   uncaughtError: Error: ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[03:58:21.036] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:58:21.036] Browser ERROR   ./app/api/actions/update/route.js:1:1
+Export prisma doesn't exist in target module
+> 1 | import { prisma } from "@/lib/prisma"; // Make sure prisma client is default-exported
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | export async function PATCH(req) {
+  4 |   try {
+
+The export prisma was not found in module [project]/lib/prisma.jsx [app-route] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:58:28.860] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:58:28.860] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/shared/lib/router/router.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:58:28.860] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[03:58:28.945] Server  LOG      ✓ Compiled in 0ms
+[03:58:29.120] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:00:18.620] Server  LOG      ✓ Compiled in 7ms
+[04:00:22.315] Server  LOG      ✓ Compiled in 10ms
+[04:01:07.960] Browser ERROR   {}
+[04:02:24.042] Server  LOG      ✓ Compiled in 3ms
