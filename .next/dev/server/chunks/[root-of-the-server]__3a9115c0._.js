@@ -58,7 +58,6 @@ const __TURBOPACK__default__export__ = prisma;
 "[project]/app/api/recommendations/route.js [app-route] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// app/api/recommendations/route.js
 __turbopack_context__.s([
     "GET",
     ()=>GET
@@ -67,27 +66,80 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$ap
 ;
 async function GET(req) {
     try {
-        const { searchParams } = new URL(req.url);
-        const userId = searchParams.get("userId");
+        const url = new URL(req.url);
+        const userId = Number(url.searchParams.get("userId"));
         if (!userId) {
-            return new Response(JSON.stringify([]), {
+            return new Response(JSON.stringify([
+                {
+                    id: 0,
+                    title: "No recommendations yet",
+                    description: "No userId provided.",
+                    imageUrl: null,
+                    link: null
+                }
+            ]), {
                 status: 400
             });
         }
+        // Fetch the user to get experienceLevel
+        const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique({
+            where: {
+                id: userId
+            },
+            select: {
+                id: true,
+                experienceLevel: true
+            }
+        });
+        if (!user?.experienceLevel) {
+            return new Response(JSON.stringify([
+                {
+                    id: 0,
+                    title: "No recommendations yet",
+                    description: "Complete your profile to see recommendations.",
+                    imageUrl: null,
+                    link: null
+                }
+            ]), {
+                status: 200
+            });
+        }
+        // Fetch recommendations based on user's experienceLevel
         const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
             where: {
-                userId: Number(userId)
+                experienceLevel: user.experienceLevel
             },
             orderBy: {
                 createdAt: "desc"
             }
         });
+        if (!recommendations.length) {
+            return new Response(JSON.stringify([
+                {
+                    id: 0,
+                    title: "No recommendations yet",
+                    description: "No recommendations available for your experience level yet.",
+                    imageUrl: null,
+                    link: null
+                }
+            ]), {
+                status: 200
+            });
+        }
         return new Response(JSON.stringify(recommendations), {
             status: 200
         });
     } catch (err) {
-        console.error("GET /api/recommendations error:", err);
-        return new Response(JSON.stringify([]), {
+        console.error("API Error:", err);
+        return new Response(JSON.stringify([
+            {
+                id: 0,
+                title: "No recommendations yet",
+                description: "Something went wrong while fetching recommendations.",
+                imageUrl: null,
+                link: null
+            }
+        ]), {
             status: 500
         });
     }

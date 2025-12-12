@@ -1,20 +1,2538 @@
-[00:00:00.742] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.806] Server  LOG      ✓ Ready in 610ms
-[00:00:03.618] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:04.594] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:25.477] Server  LOG      ✓ Compiled in 2ms
-[00:01:34.038] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:53.372] Server  LOG      ✓ Compiled in 7ms
-[00:04:15.583] Server  LOG      ✓ Compiled in 8ms
-[00:05:20.306] Server  LOG      ✓ Compiled in 11ms
-[00:05:30.458] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:10.309] Server  LOG      ✓ Compiled in 6ms
-[00:06:14.431] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:20.978] Server  LOG      ✓ Compiled in 8ms
-[00:07:22.234] Server  LOG      ✓ Compiled in 10ms
-[00:08:13.755] Server  LOG      ✓ Compiled in 5ms
-[00:08:24.498] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:16.526] Server  LOG      ✓ Compiled in 7ms
-[00:09:20.672] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:03.703] Server  LOG      ✓ Compiled in 10ms
-[00:11:28.461] Server  LOG      ✓ Compiled in 9ms
+[00:00:00.788] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.855] Server  LOG      ✓ Ready in 731ms
+[00:00:02.462] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.638] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:78:178
+
+  75         status: 400
+  76     });
+  77 }
+→ 78 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         userId: 5,
+         experienceLevel: 'beginner'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       },
+       select: {
+     ?   id?: true,
+         title: true,
+         ~~~~~
+         description: true,
+         ~~~~~~~~~~~
+         websiteUrl: true,
+         ~~~~~~~~~~
+         imageUrl: true,
+         ~~~~~~~~
+         experienceLevel: true,
+         ~~~~~~~~~~~~~~~
+     ?   createdAt?: true,
+     ?   text?: true,
+     ?   userId?: true,
+     ?   user?: true
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+Unknown field `title` for select statement on model Recommendation. Available options are listed in green. Did you mean `id`?
+Unknown field `description` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `websiteUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `imageUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `experienceLevel` for select statement on model Recommendation. Available options are listed in green.
+
+[00:00:06.699] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:78:178
+
+  75         status: 400
+  76     });
+  77 }
+→ 78 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         userId: 5,
+         experienceLevel: 'beginner'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       },
+       select: {
+     ?   id?: true,
+         title: true,
+         ~~~~~
+         description: true,
+         ~~~~~~~~~~~
+         websiteUrl: true,
+         ~~~~~~~~~~
+         imageUrl: true,
+         ~~~~~~~~
+         experienceLevel: true,
+         ~~~~~~~~~~~~~~~
+     ?   createdAt?: true,
+     ?   text?: true,
+     ?   userId?: true,
+     ?   user?: true
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+Unknown field `title` for select statement on model Recommendation. Available options are listed in green. Did you mean `id`?
+Unknown field `description` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `websiteUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `imageUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `experienceLevel` for select statement on model Recommendation. Available options are listed in green.
+
+[00:00:09.976] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:78:178
+
+  75         status: 400
+  76     });
+  77 }
+→ 78 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         userId: 5,
+         experienceLevel: 'intermediate'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       },
+       select: {
+     ?   id?: true,
+         title: true,
+         ~~~~~
+         description: true,
+         ~~~~~~~~~~~
+         websiteUrl: true,
+         ~~~~~~~~~~
+         imageUrl: true,
+         ~~~~~~~~
+         experienceLevel: true,
+         ~~~~~~~~~~~~~~~
+     ?   createdAt?: true,
+     ?   text?: true,
+     ?   userId?: true,
+     ?   user?: true
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+Unknown field `title` for select statement on model Recommendation. Available options are listed in green. Did you mean `id`?
+Unknown field `description` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `websiteUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `imageUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `experienceLevel` for select statement on model Recommendation. Available options are listed in green.
+
+[00:00:10.795] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:78:178
+
+  75         status: 400
+  76     });
+  77 }
+→ 78 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         userId: 5,
+         experienceLevel: 'advanced'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       },
+       select: {
+     ?   id?: true,
+         title: true,
+         ~~~~~
+         description: true,
+         ~~~~~~~~~~~
+         websiteUrl: true,
+         ~~~~~~~~~~
+         imageUrl: true,
+         ~~~~~~~~
+         experienceLevel: true,
+         ~~~~~~~~~~~~~~~
+     ?   createdAt?: true,
+     ?   text?: true,
+     ?   userId?: true,
+     ?   user?: true
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+Unknown field `title` for select statement on model Recommendation. Available options are listed in green. Did you mean `id`?
+Unknown field `description` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `websiteUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `imageUrl` for select statement on model Recommendation. Available options are listed in green.
+Unknown field `experienceLevel` for select statement on model Recommendation. Available options are listed in green.
+
+[00:01:24.402] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:24.777] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:97:178
+
+  94 }
+  95 const { experienceLevel } = user;
+  96 // 2️⃣ Pull recommendation matches based on experience level
+→ 97 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         OR: [
+           {
+             userId: 5
+           },
+           {
+             difficulty: 'beginner'
+             ~~~~~~~~~~
+           }
+         ]
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `difficulty` in where.OR.1.difficulty for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:01:24.899] Browser ERROR   uncaughtError: TypeError: recommendations.map is not a function
+[00:03:24.061] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:24.141] Server  LOG      ✓ Compiled in 8ms
+[00:03:24.305] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:24.494] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:92:178
+
+  89     });
+  90 }
+  91 // 🔍 Get recommendations based on experience level
+→ 92 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:03:32.835] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:92:178
+
+  89     });
+  90 }
+  91 // 🔍 Get recommendations based on experience level
+→ 92 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:03:32.915] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:92:178
+
+  89     });
+  90 }
+  91 // 🔍 Get recommendations based on experience level
+→ 92 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:08:41.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:42.107] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:92:178
+
+  89     });
+  90 }
+  91 // 🔍 Get recommendations based on experience level
+→ 92 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:08:54.495] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:92:178
+
+  89     });
+  90 }
+  91 // 🔍 Get recommendations based on experience level
+→ 92 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:08:54.577] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:92:178
+
+  89     });
+  90 }
+  91 // 🔍 Get recommendations based on experience level
+→ 92 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:09:33.862] Server  LOG      ✓ Compiled in 9ms
+[00:15:20.774] Server  LOG        Reload env: .env
+[00:16:09.361] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:37.190] Server  LOG      ✓ Compiled in 8ms
+[00:40:41.076] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:47:36.672] Server  LOG      ✓ Compiled in 36ms
+[00:47:37.472] Browser ERROR   ./app/recommendations/page.jsx:77:1
+Ecmascript file had an error
+  75 |   );
+  76 | }
+> 77 | "use client";
+     | ^^^^^^^^^^^^^
+  78 |
+  79 | import { useEffect, useState } from "react";
+  80 | import { useAuth } from "@/context/AuthContext";
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import traces:
+  Client Component Browser:
+    ./app/recommendations/page.jsx [Client Component Browser]
+    ./app/recommendations/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/recommendations/page.jsx [Client Component SSR]
+    ./app/recommendations/page.jsx [Server Component]
+[00:47:37.472] Browser ERROR   ./app/recommendations/page.jsx:82:25
+Ecmascript file had an error
+  80 | import { useAuth } from "@/context/AuthContext";
+  81 |
+> 82 | export default function RecommendationsPage() {
+     |                         ^^^^^^^^^^^^^^^^^^^
+  83 |   const { user } = useAuth();
+  84 |   const [recommendations, setRecommendations] = useState([]);
+  85 |
+
+the name `RecommendationsPage` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/recommendations/page.jsx [Client Component Browser]
+    ./app/recommendations/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/recommendations/page.jsx [Client Component SSR]
+    ./app/recommendations/page.jsx [Server Component]
+[00:47:37.472] Browser ERROR   ./app/recommendations/page.jsx:82:1
+Ecmascript file had an error
+   80 | import { useAuth } from "@/context/AuthContext";
+   81 |
+>  82 | export default function RecommendationsPage() {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  83 |   const { user } = useAuth();
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  84 |   const [recommendations, setRecommendations] = useState([]);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  85 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  86 |   useEffect(() => {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  87 |     if (!user) return;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  88 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  89 |     const fetchRecs = async () => {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  90 |       try {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  91 |         const res = await fetch(`/api/recommendations?userId=${user.id}`);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  92 |         const data = await res.json();
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  93 |         setRecommendations(Array.isArray(data) ? data : []);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  94 |       } catch (error) {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  95 |         console.error("Failed to fetch recommendations:", error);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  96 |         setRecommendations([]);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  97 |       }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  98 |     };
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  99 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 100 |     fetchRecs();
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 101 |   }, [user]);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 102 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 103 |   if (!user)
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 104 |     return (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |       <p className="text-center mt-20 text-red-600">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |         Please login to view recommendations.
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |       </p>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |     );
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 110 |   return (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 111 |     <div className="max-w-6xl mx-auto p-8">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 112 |       <h2 className="text-3xl font-bold text-green-700 mb-10 text-center">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 113 |         Your Sustainability Recommendations
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 114 |       </h2>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 115 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 116 |       {recommendations.length === 0 ? (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 117 |         <p className="text-gray-700 text-center">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 118 |           No recommendations available for your experience level yet.
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 119 |         </p>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 120 |       ) : (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 121 |         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 122 |           {recommendations.map((rec) => (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 123 |             <div
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 124 |               key={rec.id}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 125 |               className="bg-white shadow-lg rounded-xl overflow-hidden border border-green-700"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 126 |             >
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 127 |               {rec.imageUrl && (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 128 |                 <img
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 129 |                   src={rec.imageUrl}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 130 |                   alt={rec.title}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 131 |                   className="w-full h-40 object-cover"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 132 |                 />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 133 |               )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 134 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 135 |               <div className="p-5">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 136 |                 <h3 className="text-xl font-semibold text-green-800 mb-2">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 137 |                   {rec.title}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 138 |                 </h3>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 139 |                 <p className="text-gray-700 mb-4">{rec.description}</p>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 140 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 141 |                 {rec.link && (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 142 |                   <a
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 143 |                     href={rec.link}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 144 |                     target="_blank"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 145 |                     rel="noopener noreferrer"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 146 |                     className="inline-block mt-2 text-white bg-green-700 px-4 py-2 rounded-lg hover:bg-green-800 transition"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 147 |                   >
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 148 |                     Learn More →
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 149 |                   </a>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 150 |                 )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 151 |               </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 152 |             </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 153 |           ))}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 154 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 155 |       )}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 156 |     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 157 |   );
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 158 | }
+      | ^^
+  159 |
+
+the name `default` is exported multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/recommendations/page.jsx [Client Component Browser]
+    ./app/recommendations/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/recommendations/page.jsx [Client Component SSR]
+    ./app/recommendations/page.jsx [Server Component]
+[00:47:37.472] Browser ERROR   ./app/recommendations/page.jsx:80:10
+Ecmascript file had an error
+  78 |
+  79 | import { useEffect, useState } from "react";
+> 80 | import { useAuth } from "@/context/AuthContext";
+     |          ^^^^^^^
+  81 |
+  82 | export default function RecommendationsPage() {
+  83 |   const { user } = useAuth();
+
+the name `useAuth` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/recommendations/page.jsx [Client Component Browser]
+    ./app/recommendations/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/recommendations/page.jsx [Client Component SSR]
+    ./app/recommendations/page.jsx [Server Component]
+[00:47:37.472] Browser ERROR   ./app/recommendations/page.jsx:79:10
+Ecmascript file had an error
+  77 | "use client";
+  78 |
+> 79 | import { useEffect, useState } from "react";
+     |          ^^^^^^^^^
+  80 | import { useAuth } from "@/context/AuthContext";
+  81 |
+  82 | export default function RecommendationsPage() {
+
+the name `useEffect` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/recommendations/page.jsx [Client Component Browser]
+    ./app/recommendations/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/recommendations/page.jsx [Client Component SSR]
+    ./app/recommendations/page.jsx [Server Component]
+[00:47:37.472] Browser ERROR   ./app/recommendations/page.jsx:79:21
+Ecmascript file had an error
+  77 | "use client";
+  78 |
+> 79 | import { useEffect, useState } from "react";
+     |                     ^^^^^^^^
+  80 | import { useAuth } from "@/context/AuthContext";
+  81 |
+  82 | export default function RecommendationsPage() {
+
+the name `useState` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/recommendations/page.jsx [Client Component Browser]
+    ./app/recommendations/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/recommendations/page.jsx [Client Component SSR]
+    ./app/recommendations/page.jsx [Server Component]
+[00:49:04.312] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:35.839] Server  LOG      ✓ Compiled in 6ms
+[00:50:38.851] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:54.933] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:23.089] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:103:178
+
+  100 }
+  101 // Normalize experience level to lowercase
+  102 const experienceLevel = user.experienceLevel.toLowerCase();
+→ 103 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'beginner'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:52:23.166] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:103:178
+
+  100 }
+  101 // Normalize experience level to lowercase
+  102 const experienceLevel = user.experienceLevel.toLowerCase();
+→ 103 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'beginner'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:53:02.124] Server  LOG      ✓ Compiled in 10ms
+[00:53:05.648] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:05.802] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:106:178
+
+  103 // 3️⃣ Normalize experienceLevel to match recommendations table
+  104 const experienceLevel = user.experienceLevel.toLowerCase();
+  105 // 4️⃣ Fetch recommendations
+→ 106 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'beginner'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:53:49.400] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:49.520] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:106:178
+
+  103 // 3️⃣ Normalize experienceLevel to match recommendations table
+  104 const experienceLevel = user.experienceLevel.toLowerCase();
+  105 // 4️⃣ Fetch recommendations
+→ 106 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'beginner'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:55:04.443] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:04.591] Server  ERROR   Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:89:178
+
+  86     });
+  87 }
+  88 // Case-insensitive match
+→ 89 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: {
+         ~~~~~~~~~~~~~~~
+           equals: 'BEGINNER',
+           mode: 'insensitive'
+         }
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:55:28.826] Server  ERROR   Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:89:178
+
+  86     });
+  87 }
+  88 // Case-insensitive match
+→ 89 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: {
+         ~~~~~~~~~~~~~~~
+           equals: 'BEGINNER',
+           mode: 'insensitive'
+         }
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:55:28.913] Server  ERROR   Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:89:178
+
+  86     });
+  87 }
+  88 // Case-insensitive match
+→ 89 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: {
+         ~~~~~~~~~~~~~~~
+           equals: 'BEGINNER',
+           mode: 'insensitive'
+         }
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:56:21.464] Server  LOG      ✓ Compiled in 2ms
+[00:56:30.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:30.619] Server  ERROR   GET /api/recommendations error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:107:178
+
+  104     });
+  105 }
+  106 // 2️⃣ Fetch recommendations with case-insensitive match
+→ 107 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: {
+          ~~~~~~~~~~~~~~~
+            equals: 'BEGINNER',
+            mode: 'insensitive'
+          }
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[00:58:15.852] Server  LOG      ✓ Compiled in 5ms
+[00:58:19.364] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:58:19.508] Browser ERROR   {}
+[00:59:18.389] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:59:18.518] Browser ERROR   {}
+[01:00:15.165] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:15.296] Browser ERROR   {}
+[01:00:32.441] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:34.959] Browser ERROR   {}
+[01:00:34.959] Browser ERROR   {}
+[01:00:48.126] Server  ERROR   API Error: Error: Invalid userId
+[01:01:40.290] Server  LOG      ✓ Compiled in 5ms
+[01:04:04.192] Server  LOG      ✓ Compiled in 8ms
+[01:04:07.197] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:04:08.228] Server  ERROR   Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for that experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:04:31.409] Server  ERROR   Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for that experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:04:31.486] Server  ERROR   Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for that experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:08:02.725] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:02.884] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:89:178
+
+  86     });
+  87 }
+  88 // Fetch recommendations for that enum value
+→ 89 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:09:40.634] Server  LOG      ✓ Compiled in 2ms
+[01:09:46.807] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:46.956] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:98:178
+
+  95     });
+  96 }
+  97 // 2️⃣ Fetch recommendations for that experience level
+→ 98 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:11:12.322] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:12.451] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:98:178
+
+  95     });
+  96 }
+  97 // 2️⃣ Fetch recommendations for that experience level
+→ 98 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:11:49.314] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:98:178
+
+  95     });
+  96 }
+  97 // 2️⃣ Fetch recommendations for that experience level
+→ 98 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:11:49.395] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:98:178
+
+  95     });
+  96 }
+  97 // 2️⃣ Fetch recommendations for that experience level
+→ 98 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:13:21.694] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:89:178
+
+  86     });
+  87 }
+  88 // Fetch recommendations for this level
+→ 89 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:13:21.770] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:89:178
+
+  86     });
+  87 }
+  88 // Fetch recommendations for this level
+→ 89 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:16:47.878] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:16:48.042] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:85:178
+
+  82 if (!user?.experienceLevel) return new Response(JSON.stringify([]), {
+  83     status: 200
+  84 });
+→ 85 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:16:49.945] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:85:178
+
+  82 if (!user?.experienceLevel) return new Response(JSON.stringify([]), {
+  83     status: 200
+  84 });
+→ 85 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:16:50.019] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:85:178
+
+  82 if (!user?.experienceLevel) return new Response(JSON.stringify([]), {
+  83     status: 200
+  84 });
+→ 85 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:18:36.494] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:36.633] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for this user's experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:18:38.469] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for this user's experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:18:38.547] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for this user's experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:18:42.268] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for this user's experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:18:42.344] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:91:178
+
+  88     });
+  89 }
+  90 // Fetch recommendations for this user's experience level
+→ 91 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:20:30.374] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:20:30.538] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:101:178
+
+   98     });
+   99 }
+  100 // 3️⃣ Fetch recommendations based on the user's experience level
+→ 101 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:21:38.236] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:21:38.379] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:86:178
+
+  83 if (!user?.experienceLevel) return new Response(JSON.stringify([]), {
+  84     status: 200
+  85 });
+→ 86 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:23:27.151] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:23:27.298] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:100:178
+
+   97     });
+   98 }
+   99 // Fetch recommendations for this user's experience level
+→ 100 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:25:42.183] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:25:42.342] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:99:178
+
+  96         status: 200
+  97     });
+  98 }
+→ 99 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:28:15.152] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:28:15.277] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:99:178
+
+  96         status: 200
+  97     });
+  98 }
+→ 99 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+       where: {
+         experienceLevel: 'BEGINNER'
+         ~~~~~~~~~~~~~~~
+       },
+       orderBy: {
+         createdAt: 'desc'
+       }
+     })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:33.667] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:33.814] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:34.629] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:34.744] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:34.870] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:34.948] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:35.072] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:35.148] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:35.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:35.508] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:35.656] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:35.734] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:35.869] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:35.949] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:36.069] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:36.146] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:36.248] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:36.329] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:36.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:36.569] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:58.109] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:31:58.183] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:32:03.549] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:32:03.623] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:33:52.859] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:33:52.976] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:33:53.779] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:33:53.866] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:34:20.798] Server  LOG      ✓ Compiled in 22ms
+[01:34:26.889] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:34:27.004] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:35:11.078] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:35:11.195] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:35:44.877] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:35:44.953] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:35:53.811] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:35:53.884] Server  ERROR   API Error: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany()` invocation in
+/Users/aliciamartinez/Downloads/Final/.next/dev/server/chunks/[root-of-the-server]__3a9115c0._.js:108:178
+
+  105     });
+  106 }
+  107 // Fetch recommendations based on user's experienceLevel
+→ 108 const recommendations = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$jsx__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].recommendation.findMany({
+        where: {
+          experienceLevel: 'BEGINNER'
+          ~~~~~~~~~~~~~~~
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      })
+
+Unknown arg `experienceLevel` in where.experienceLevel for type RecommendationWhereInput. Available args:
+
+type RecommendationWhereInput {
+  AND?: RecommendationWhereInput | List<RecommendationWhereInput>
+  OR?: List<RecommendationWhereInput>
+  NOT?: RecommendationWhereInput | List<RecommendationWhereInput>
+  id?: IntFilter | Int
+  text?: StringFilter | String
+  createdAt?: DateTimeFilter | DateTime
+  userId?: IntFilter | Int
+  user?: UserRelationFilter | UserWhereInput
+}
+
+
+[01:39:27.856] Server  LOG      ✓ Compiled in 8ms
+[01:40:57.914] Server  LOG      ✓ Compiled in 6ms
+[01:41:01.100] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:41:06.739] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:41:44.711] Server  LOG      ✓ Compiled in 12ms
+[01:42:50.334] Server  LOG      ✓ Compiled in 3ms
+[01:42:55.218] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:45:18.702] Server  LOG      ✓ Compiled in 3ms
+[01:45:30.277] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:46:15.908] Server  LOG      ✓ Compiled in 16ms
+[01:49:11.512] Server  LOG      ✓ Compiled in 7ms
+[01:50:03.726] Server  LOG      ✓ Compiled in 6ms
+[01:51:27.007] Server  LOG      ✓ Compiled in 7ms
+[01:53:12.892] Server  LOG      ✓ Compiled in 4ms
+[01:53:33.392] Server  LOG      ✓ Compiled in 5ms
+[01:54:09.087] Server  LOG      ✓ Compiled in 2ms
+[01:56:01.535] Server  LOG      ✓ Compiled in 41ms
+[01:56:18.439] Server  LOG      ✓ Compiled in 16ms
+[01:57:11.355] Server  LOG      ✓ Compiled in 18ms
+[01:57:23.088] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:59:29.788] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:01:20.691] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[02:01:36.712] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:01:36.775] Server  LOG      ✓ Compiled in 2ms
+[02:01:36.814] Server  ERROR    ⨯ ReferenceError: Link is not defined
+[02:01:36.904] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:01:37.015] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[02:05:42.574] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:05:42.644] Server  LOG      ✓ Compiled in 15ms
+[02:05:42.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:06:32.568] Server  LOG      ✓ Compiled in 3ms
+[02:06:44.349] Server  LOG      ✓ Compiled in 7ms
+[02:09:37.240] Server  LOG      ✓ Compiled in 8ms
+[02:10:34.467] Server  LOG      ✓ Compiled in 8ms
+[02:10:59.274] Server  LOG      ✓ Compiled in 4ms
+[02:11:08.017] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[02:11:30.692] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:11:30.766] Server  LOG      ✓ Compiled in 21ms
+[02:11:30.900] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:13:19.403] Server  LOG      ✓ Compiled in 6ms
+[02:14:11.558] Server  LOG      ✓ Compiled in 6ms
+[02:14:25.913] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:15:40.359] Server  LOG      ✓ Compiled in 4ms
+[02:15:43.466] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:17:26.114] Server  LOG      ✓ Compiled in 4ms
+[02:18:16.156] Server  LOG      ✓ Compiled in 8ms
+[02:18:33.287] Server  LOG      ✓ Compiled in 2ms
+[02:20:39.623] Server  LOG      ✓ Compiled in 18ms
+[02:20:40.472] Browser ERROR   ./app/goals/page.jsx:179:2
+Parsing ecmascript source code failed
+  177 |     </div>
+  178 |   );
+> 179 | }
+      |  ^
+  180 |
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/goals/page.jsx [Client Component Browser]
+    ./app/goals/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/goals/page.jsx [Client Component SSR]
+    ./app/goals/page.jsx [Server Component]
+[02:21:07.332] Server  LOG      ✓ Compiled in 7ms
+[02:21:07.470] Browser ERROR   ./app/goals/page.jsx:99:3
+Parsing ecmascript source code failed
+   97 |       <p>
+   98 |         if (!user) {
+>  99 |   return (
+      |   ^^^^^^
+  100 |     <div className="page-contain" style={{ textAlign: "center" }}>
+  101 |       <h1>Eco Actions Tracker</h1>
+  102 |       <p>
+
+Expected '</', got 'return'
+
+Import traces:
+  Client Component Browser:
+    ./app/goals/page.jsx [Client Component Browser]
+    ./app/goals/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/goals/page.jsx [Client Component SSR]
+    ./app/goals/page.jsx [Server Component]
+[02:21:28.125] Server  LOG      ✓ Compiled in 12ms
+[02:21:28.471] Browser ERROR   ./app/goals/page.jsx:179:2
+Parsing ecmascript source code failed
+  177 |     </div>
+  178 |   );
+> 179 | }
+      |  ^
+  180 |
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/goals/page.jsx [Client Component Browser]
+    ./app/goals/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./app/goals/page.jsx [Client Component SSR]
+    ./app/goals/page.jsx [Server Component]
+[02:23:16.735] Server  LOG      ✓ Compiled in 8ms
+[02:24:47.406] Server  LOG      ✓ Compiled in 7ms
+[02:27:13.545] Server  LOG      ✓ Compiled in 15ms
+[02:28:09.332] Server  LOG      ✓ Compiled in 4ms
+[02:28:17.636] Server  LOG      ✓ Compiled in 15ms
+[02:29:29.919] Server  LOG      ✓ Compiled in 2ms

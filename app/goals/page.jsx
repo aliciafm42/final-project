@@ -1,6 +1,8 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { useAuth } from "@/context/AuthContext";
+import Link from "next/link";
 
 export default function GoalsPage() {
   const { user } = useAuth();
@@ -25,23 +27,22 @@ export default function GoalsPage() {
     try {
       const res = await fetch("/api/goals/list?userId=" + user.id);
       const data = await res.json();
-      const normalizedGoals = (data.goals || []).map((g) =>
-        typeof g === "string" ? { id: g, text: g } : g
-      );
-      setGoals(normalizedGoals);
+      setGoals(data.goals || []);
     } catch (err) {
       console.error("Failed to fetch goals:", err);
     }
   };
 
-  // Toggle card selection
+  useEffect(() => {
+    fetchGoals();
+  }, [user]);
+
   const toggleSelection = (action) => {
     setSelectedGoals((prev) =>
       prev.includes(action) ? prev.filter((g) => g !== action) : [...prev, action]
     );
   };
 
-  // Add selected goals
   const handleAddSelectedGoals = async () => {
     if (!selectedGoals.length) return;
 
@@ -66,7 +67,6 @@ export default function GoalsPage() {
     setSelectedGoals([]);
   };
 
-  // Delete a goal
   const handleDeleteGoal = async (goalId) => {
     try {
       await fetch("/api/goals/delete", {
@@ -80,29 +80,32 @@ export default function GoalsPage() {
     }
   };
 
-  useEffect(() => {
-    fetchGoals();
-  }, [user]);
-
-  if (!user)
+  // If user is not logged in
+  if (!user) {
     return (
-      <p className="text-center mt-20 text-red-600">
-        Please login to view goals.
-      </p>
+      <div className="page-contain" style={{ textAlign: "center" }}>
+        <h1>Set Your Eco Goals</h1>
+        <p>Start small, stay consistent, and watch your eco-friendly impact grow over time.</p>
+        <Link
+          href="/profile"
+          className="green-button"
+          style={{ marginTop: "30px", display: "inline-block" }}
+        >
+          Login or Register
+        </Link>
+      </div>
     );
+  }
 
-  // Show only actions not already added
+  // Available actions not already added
   const availableActions = sustainableActions.filter(
     (action) => !goals.some((g) => g.text === action)
   );
 
   return (
     <div className="page-contain max-w-5xl mx-auto p-6 text-center">
-      <h2 className="text-3xl font-bold text-green-700 mb-8">
-        Pick Your Sustainable Goals
-      </h2>
+      <h2 className="text-3xl font-bold text-green-700 mb-8">Pick Your Sustainable Goals</h2>
 
-      {/* Sustainable Action Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 justify-items-center">
         {availableActions.length === 0 && (
           <p className="text-gray-600">You’ve added all available goals!</p>
@@ -125,7 +128,6 @@ export default function GoalsPage() {
         })}
       </div>
 
-      {/* Confirm Button */}
       {selectedGoals.length > 0 && (
         <button
           onClick={handleAddSelectedGoals}
@@ -135,7 +137,6 @@ export default function GoalsPage() {
         </button>
       )}
 
-      {/* Current Goals List */}
       <h3 className="text-2xl font-semibold mb-4">Your Goals:</h3>
       {goals.length === 0 ? (
         <p className="text-gray-600">No goals added yet.</p>
